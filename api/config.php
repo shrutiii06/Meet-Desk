@@ -12,11 +12,16 @@
 date_default_timezone_set('Asia/Kolkata');
 
 // ===== STEP 1: CORS HEADERS =====
-// These allow the frontend (Vue.js) to make requests from browser
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');           // Allow any frontend
+
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+} else {
+    header('Access-Control-Allow-Origin: *');
+}
 header('Access-Control-Allow-Methods: GET, POST, PATCH, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
+header('Access-Control-Allow-Credentials: true');
 
 // Handle preflight requests
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -25,36 +30,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // ===== STEP 2: MONGODB CONNECTION =====
-require_once __DIR__ . '/database.php';  // Get MONGODB_URI from database.php
-$GLOBALS['mongoUri'] = getenv('MONGODB_URI') ?: MONGODB_URI;  // mongodb://localhost:27017
-$GLOBALS['dbName'] = 'meetdesk';  // Database name
+require_once __DIR__ . '/database.php';
+$GLOBALS['mongoUri'] = getenv('MONGODB_URI') ?: MONGODB_URI;
+$GLOBALS['dbName'] = 'meetdesk';
 
-/**
- * getManager()
- * Creates MongoDB connection object
- * Used by every endpoint to connect to MongoDB
- */
 function getManager() {
     return new MongoDB\Driver\Manager($GLOBALS['mongoUri']);
 }
 
-/**
- * getNamespace()
- * Returns "meetdesk.users" - the MongoDB collection
- * Where all user data is stored
- */
 function getNamespace() {
     return $GLOBALS['dbName'] . '.users';
 }
 
-/**
- * jsonResponse($data, $code = 200)
- * Sends JSON response back to frontend
- * 
- * Example:
- *   jsonResponse(['error' => 'Email already exists'], 400);
- *   jsonResponse(['_id' => 'abc123', 'name' => 'John'], 201);
- */
 function jsonResponse($data, $code = 200) {
     http_response_code($code);
     echo json_encode($data);
