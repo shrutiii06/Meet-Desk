@@ -1,10 +1,10 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
-RUN docker-php-ext-install mysqli
 RUN pecl install mongodb && docker-php-ext-enable mongodb
 
-COPY . /var/www/html/
+WORKDIR /app
+COPY . /app/
 
-RUN chown -R www-data:www-data /var/www/html
+EXPOSE 8080
 
-EXPOSE 80
+CMD ["php", "-S", "0.0.0.0:8080", "-t", "/app"]
