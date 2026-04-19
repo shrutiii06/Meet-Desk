@@ -1,10 +1,11 @@
-FROM php:8.2-cli
+FROM php:8.2-apache
 
 RUN pecl install mongodb && docker-php-ext-enable mongodb
 
-WORKDIR /app
-COPY . /app/
+RUN a2enmod rewrite
 
-EXPOSE 8080
+COPY . /var/www/html/
 
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "/app"]
+RUN chown -R www-data:www-data /var/www/html/
+
+EXPOSE 80
