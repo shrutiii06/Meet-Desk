@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email - Meet Desk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    [v-cloak] { display: none; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
+      <div class="w-full max-w-md">
+        <!-- Card -->
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <!-- Header -->
+          <div class="bg-gradient-to-r from-[#4285F4] to-[#5B9BF5] p-8 text-center">
+            <div v-if="!verified" class="mb-4">
+              <svg class="w-16 h-16 mx-auto text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div v-else class="mb-4">
+              <svg class="w-16 h-16 mx-auto text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h1 v-if="!verified" class="text-2xl font-bold text-white">Verify Your Email</h1>
+            <h1 v-else class="text-2xl font-bold text-white">Email Verified!</h1>
+          </div>
+
+          <!-- Content -->
+          <div class="p-8">
+            <!-- Loading State -->
+            <div v-if="isVerifying" class="text-center py-8">
+              <div class="inline-block">
+                <svg class="w-12 h-12 animate-spin text-[#4285F4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p class="mt-4 text-gray-600 font-medium">Verifying your email...</p>
+              <p class="text-sm text-gray-500">Please wait while we confirm your email address.</p>
+            </div>
+
+            <!-- Success State -->
+            <div v-else-if="verified" class="text-center space-y-6">
+              <div class="bg-green-50 rounded-lg p-4">
+                <p class="text-lg font-semibold text-green-800">{{ message }}</p>
+              </div>
+              
+              <div class="space-y-3">
+                <p class="text-gray-600">Your email has been successfully verified!</p>
+                <p class="text-gray-600">Your account is now active and ready to use.</p>
+              </div>
+
+              <button 
+                @click="goToLogin" 
+                class="w-full py-3 bg-[#4285F4] text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+              >
+                Go to Login
+              </button>
+
+              <button 
+                @click="goDashboard" 
+                class="w-full py-3 bg-gray-200 text-gray-800 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                Go to Dashboard
+              </button>
+            </div>
+
+            <!-- Initial State - No Token -->
+            <div v-else class="text-center space-y-6">
+              <div class="bg-blue-50 rounded-lg p-4">
+                <p class="text-lg font-semibold text-blue-800">📧 Registration Successful!</p>
+              </div>
+              
+              <div class="space-y-3">
+                <p class="text-gray-600">Your account has been created successfully.</p>
+                <p class="text-sm text-gray-500">A verification email has been sent to: <strong>{{ email }}</strong></p>
+              </div>
+
+              <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <p class="text-sm text-yellow-800">
+                  <strong>Note:</strong> Email verification is optional for testing. You can proceed to login now.
+                </p>
+              </div>
+
+              <div class="space-y-3">
+                <button 
+                  @click="goToLogin" 
+                  class="w-full py-3 bg-[#4285F4] text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+                >
+                  Continue to Login
+                </button>
+                <p class="text-xs text-gray-500">You can verify your email later from your profile settings</p>
+              </div>
+            </div>
+
+            <!-- Error State -->
+            <div v-if="error && !verified && isVerifying === false" class="text-center space-y-6 mt-6">
+              <div class="bg-red-50 rounded-lg p-4">
+                <p class="text-sm font-semibold text-red-800">{{ error }}</p>
+              </div>
+              
+              <button 
+                @click="goToLogin" 
+                class="w-full py-3 bg-gray-200 text-gray-800 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+                >
+                  Back to Login
+                </button>
+              </div>
+            </div>
+
+            <!-- Initial State / Manual Entry -->
+            <div v-else-if="!isVerifying && !token && !email" class="text-center space-y-6">
+              <p class="text-gray-600">Enter your email and verification token to verify your account:</p>
+              
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <input 
+                    v-model="manualEmail" 
+                    type="email" 
+                    placeholder="your@email.com"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4]"
+                  >
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Verification Token</label>
+                  <input 
+                    v-model="manualToken" 
+                    type="text" 
+                    placeholder="Paste your verification token"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] font-mono text-sm"
+                  >
+                </div>
+
+                <button 
+                  @click="manualVerify" 
+                  :disabled="!manualEmail || !manualToken"
+                  :class="['w-full py-2 rounded-lg font-semibold transition-colors', manualEmail && manualToken ? 'bg-[#4285F4] text-white hover:bg-blue-600' : 'bg-gray-300 text-gray-600 cursor-not-allowed']"
+                >
+                  Verify Email
+                </button>
+              </div>
+
+              <div class="border-t border-gray-200 pt-4">
+                <a href="login.html" class="text-[#4285F4] hover:underline font-medium">Back to Login</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-6">
+          <p class="text-gray-600 text-sm">Need help? <a href="#" class="text-[#4285F4] hover:underline">Contact Support</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          email: '',
+          token: '',
+          verified: false,
+          isVerifying: false,
+          error: '',
+          message: '',
+          manualEmail: '',
+          manualToken: ''
+        };
+      },
+      mounted() {
+        // Get token and email from URL parameters
+        const params = new URLSearchParams(window.location.search);
+        this.token = params.get('token') || '';
+        this.email = params.get('email') || '';
+
+        if (this.token && this.email) {
+          this.verifyEmail();
+        }
+      },
+      methods: {
+        async verifyEmail() {
+          if (!this.email || !this.token) {
+            this.error = 'Email and token are required';
+            return;
+          }
+
+          this.isVerifying = true;
+          this.error = '';
+
+          try {
+            const response = await fetch('api/auth/verify-email.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: this.email,
+                token: this.token
+              })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+              this.error = data.error || 'Failed to verify email';
+              this.isVerifying = false;
+              return;
+            }
+
+            this.verified = true;
+            this.message = data.message;
+            this.isVerifying = false;
+
+          } catch (err) {
+            this.error = 'Error verifying email: ' + err.message;
+            this.isVerifying = false;
+          }
+        },
+        async manualVerify() {
+          this.email = this.manualEmail;
+          this.token = this.manualToken;
+          await this.verifyEmail();
+        },
+        goToLogin() {
+          window.location.href = 'login.html';
+        },
+        goDashboard() {
+          window.location.href = 'dashboard.html';
+        },
+        requestNewVerification() {
+          // TODO: Implement request new verification email
+          alert('Feature coming soon! Please contact support to resend verification email.');
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

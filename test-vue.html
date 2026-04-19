@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Test - Meet Desk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    [v-cloak] { display: none; }
+  </style>
+</head>
+<body class="bg-blue-50">
+  <div id="app" v-cloak class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">Vue is Working!</h1>
+      <p class="text-gray-600 mb-6">Current time: {{ currentTime }}</p>
+      <p class="text-4xl font-bold text-blue-500 mb-4">{{ message }}</p>
+      <button @click="toggleMessage" class="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition">
+        Click Me
+      </button>
+      <p class="text-sm text-gray-500 mt-4">Message: {{ message }}</p>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          message: '✅ Vue is loaded!',
+          currentTime: new Date().toLocaleTimeString()
+        };
+      },
+      mounted() {
+        setInterval(() => {
+          this.currentTime = new Date().toLocaleTimeString();
+        }, 1000);
+      },
+      methods: {
+        toggleMessage() {
+          this.message = this.message === '✅ Vue is loaded!' ? '🎉 You clicked it!' : '✅ Vue is loaded!';
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

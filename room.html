@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Room - MeetDesk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.20.0.js"></script>
+  <script src="js/webrtc-client.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    [v-cloak] { display: none; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      margin: 0;
+      overflow: hidden;
+    }
+    
+    .video-container {
+      position: relative;
+      background: #1a1a1a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .participant-name {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .chat-messages {
+      max-height: calc(100vh - 300px);
+      overflow-y: auto;
+    }
+    
+    .chat-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .chat-messages::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    .chat-messages::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 3px;
+    }
+    
+    .control-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    @media (min-width: 640px) {
+      .control-btn {
+        width: 56px;
+        height: 56px;
+      }
+    }
+    
+    .control-btn:hover {
+      transform: scale(1.1);
+    }
+    
+    .control-btn.active {
+      background: #4285F4;
+    }
+    
+    .control-btn.inactive {
+      background: #ef4444;
+    }
+    
+    .control-btn.leave {
+      background: #dc2626;
+      width: auto;
+      border-radius: 32px;
+      padding: 0 14px;
+    }
+    
+    @media (min-width: 640px) {
+      .control-btn.leave {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-900">
+  <div id="app" v-cloak>
+    <!-- Main Meeting Room -->
+    <div class="h-[100dvh] w-full flex flex-col bg-gray-900">
+      
+      <!-- Top Bar -->
+      <div class="bg-gray-800 px-4 md:px-6 py-3 md:py-4 flex flex-wrap md:flex-nowrap items-center justify-between border-b border-gray-700 gap-2">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
+            <svg class="w-6 h-6 text-[#4285F4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span class="text-white font-semibold text-lg">{{ meetingInfo.topic }}</span>
+          </div>
+          <span class="text-gray-400 text-sm">{{ currentTime }}</span>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 text-gray-300">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+            </svg>
+            <span class="font-medium">{{ participants.length }}</span>
+          </div>
+          
+          <div class="text-gray-400 text-sm">
+            Meeting ID: <span class="text-white font-mono">{{ meetingInfo.meetingId }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex-1 flex overflow-hidden relative">
+        
+        <!-- Video Grid Area -->
+        <div class="flex-1 p-2 md:p-4 overflow-auto w-full flex flex-col">
+          <!-- Main Speaker View -->
+          <div v-if="mainSpeaker" class="w-full mb-4 flex flex-col items-center justify-center">
+            <!-- Medium rectangular wrapper, max 60% of viewport height so it's not massive -->
+            <div class="video-container w-full max-w-4xl aspect-video max-h-[60vh] flex items-center justify-center bg-black rounded-xl shadow-lg relative overflow-hidden">
+              <video 
+                :data-userid="mainSpeaker.id" 
+                class="w-full h-full"
+                style="object-fit: contain;"
+                autoplay 
+                playsinline
+                :muted="mainSpeaker.id === localParticipant.id"
+              ></video>
+              <div class="participant-name absolute bottom-3 left-3 bg-black bg-opacity-60 text-white px-3 py-1 rounded-md shadow-sm z-10">
+                {{ mainSpeaker.name }}
+                <span v-if="mainSpeaker.id === localParticipant.id" class="opacity-80">(You)</span>
+                <svg v-if="!mainSpeaker.audioEnabled" class="w-4 h-4 inline ml-1 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participant Thumbnails -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div 
+              v-for="participant in otherParticipants" 
+              :key="participant.id"
+              @click="setMainSpeaker(participant)"
+              class="video-container aspect-video cursor-pointer hover:ring-2 hover:ring-[#4285F4] transition"
+            >
+              <video 
+                :data-userid="participant.id" 
+                class="w-full h-full object-cover"
+                autoplay 
+                playsinline
+                :muted="participant.id === localParticipant.id"
+              ></video>
+              <div v-if="!participant.videoEnabled" class="w-full h-full bg-gray-700 flex items-center justify-center">
+                <div class="w-16 h-16 bg-[#4285F4] rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                  {{ participant.name.charAt(0).toUpperCase() }}
+                </div>
+              </div>
+              <div class="participant-name">
+                {{ participant.name }}
+                <span v-if="participant.id === localParticipant.id">(You)</span>
+                <svg v-if="!participant.audioEnabled" class="w-3 h-3 inline ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div v-show="showSidebar" class="absolute inset-y-0 right-0 z-50 w-full sm:w-80 md:relative md:z-auto bg-white border-l border-gray-200 flex flex-col shadow-2xl md:shadow-none">
+          
+          <!-- Mobile Close Button -->
+          <div class="md:hidden flex justify-end p-2 bg-gray-50 border-b border-gray-200">
+            <button @click="showSidebar = false" class="text-gray-500 hover:text-gray-700 p-2 rounded-lg bg-gray-200">
+              ✖ Close
+            </button>
+          </div>
+
+          <!-- Sidebar Tabs -->
+          <div class="flex border-b border-gray-200">
+            <button 
+              @click="activeTab = 'chat'"
+              :class="['flex-1 py-3 px-4 font-medium text-sm transition', activeTab === 'chat' ? 'text-[#4285F4] border-b-2 border-[#4285F4]' : 'text-gray-600 hover:text-gray-900']"
+            >
+              Chat
+              <span v-if="unreadMessages > 0" class="ml-2 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">{{ unreadMessages }}</span>
+            </button>
+            <button 
+              @click="activeTab = 'participants'"
+              :class="['flex-1 py-3 px-4 font-medium text-sm transition', activeTab === 'participants' ? 'text-[#4285F4] border-b-2 border-[#4285F4]' : 'text-gray-600 hover:text-gray-900']"
+            >
+              Participants ({{ participants.length }})
+            </button>
+          </div>
+
+          <!-- Chat Tab -->
+          <div v-show="activeTab === 'chat'" class="flex-1 flex flex-col">
+            <!-- Messages -->
+            <div ref="chatMessages" class="flex-1 p-4 chat-messages space-y-3">
+              <div v-for="(message, index) in messages" :key="index" class="flex gap-2">
+                <div class="w-8 h-8 bg-[#4285F4] rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                  {{ message.sender.charAt(0).toUpperCase() }}
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-baseline gap-2">
+                    <span class="font-semibold text-sm">{{ message.sender }}</span>
+                    <span class="text-xs text-gray-500">{{ message.time }}</span>
+                  </div>
+                  <p class="text-sm text-gray-700 mt-1">{{ message.text }}</p>
+                </div>
+              </div>
+              
+              <div v-if="messages.length === 0" class="text-center text-gray-400 py-8">
+                <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+                <p class="text-sm">No messages yet</p>
+                <p class="text-xs mt-1">Start the conversation!</p>
+              </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="p-4 border-t border-gray-200">
+              <form @submit.prevent="sendMessage" class="flex gap-2">
+                <input 
+                  v-model="newMessage"
+                  type="text" 
+                  placeholder="Type a message..."
+                  class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+                >
+                <button 
+                  type="submit"
+                  :disabled="!newMessage.trim()"
+                  class="px-4 py-2 bg-[#4285F4] text-white rounded-lg hover:bg-[#3367D6] disabled:bg-gray-300 disabled:cursor-not-allowed transition"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Participants Tab -->
+          <div v-show="activeTab === 'participants'" class="flex-1 overflow-auto p-4">
+            <div class="space-y-2">
+              <div 
+                v-for="participant in participants" 
+                :key="participant.id"
+                class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition"
+              >
+                <div class="w-10 h-10 bg-[#4285F4] rounded-full flex items-center justify-center text-white font-bold">
+                  {{ participant.name.charAt(0).toUpperCase() }}
+                </div>
+                <div class="flex-1">
+                  <div class="font-medium text-sm">
+                    {{ participant.name }}
+                    <span v-if="participant.id === localParticipant.id" class="text-xs text-gray-500">(You)</span>
+                    <span v-if="participant.isHost" class="ml-2 text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded">Host</span>
+                  </div>
+                  <div class="flex gap-2 mt-1">
+                    <span :class="['text-xs', participant.audioEnabled ? 'text-green-600' : 'text-red-600']">
+                      <svg class="w-3 h-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+                      </svg>
+                      {{ participant.audioEnabled ? 'On' : 'Off' }}
+                    </span>
+                    <span :class="['text-xs', participant.videoEnabled ? 'text-green-600' : 'text-red-600']">
+                      <svg class="w-3 h-3 inline" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                      </svg>
+                      {{ participant.videoEnabled ? 'On' : 'Off' }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Controls -->
+      <div class="bg-gray-800 px-4 md:px-6 py-3 md:py-4 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between border-t border-gray-700 gap-4">
+        <div class="hidden sm:flex items-center gap-2">
+          <span class="text-gray-400 text-sm">{{ formatDuration(meetingDuration) }}</span>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- Microphone -->
+          <button 
+            @click="toggleAudio"
+            :class="['control-btn', localParticipant.audioEnabled ? 'active' : 'inactive']"
+            :title="localParticipant.audioEnabled ? 'Mute' : 'Unmute'"
+          >
+            <svg v-if="localParticipant.audioEnabled" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd"/>
+            </svg>
+            <svg v-else class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+
+          <!-- Video -->
+          <button 
+            @click="toggleVideo"
+            :class="['control-btn', localParticipant.videoEnabled ? 'active' : 'inactive']"
+            :title="localParticipant.videoEnabled ? 'Stop Video' : 'Start Video'"
+          >
+            <svg v-if="localParticipant.videoEnabled" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+            </svg>
+            <svg v-else class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+
+          <!-- Screen Share -->
+          <button 
+            @click="toggleScreenShare"
+            :class="['control-btn', isScreenSharing ? 'active' : 'bg-gray-700 hover:bg-gray-600']"
+            title="Share Screen"
+          >
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </button>
+
+          <!-- Chat Toggle -->
+          <button 
+            @click="showSidebar = !showSidebar"
+            :class="['control-btn bg-gray-700 hover:bg-gray-600']"
+            title="Toggle Chat"
+          >
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+            </svg>
+            <span v-if="unreadMessages > 0" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {{ unreadMessages }}
+            </span>
+          </button>
+
+          <!-- Leave Meeting -->
+          <button 
+            @click="leaveMeeting"
+            class="control-btn leave ml-2"
+            title="Leave Meeting"
+          >
+            <svg class="w-6 h-6 text-white mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-white font-medium text-sm hidden sm:inline">Leave</span>
+          </button>
+        </div>
+
+        <div class="text-gray-400 text-sm">
+          <!-- Additional info or settings -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    
+    createApp({
+      data() {
+        return {
+          meetingInfo: {
+            topic: 'Loading...',
+            meetingId: '000000000',
+            password: ''
+          },
+          localParticipant: {
+            id: 'local-' + Date.now(),
+            name: 'You',
+            audioEnabled: true,
+            videoEnabled: true,
+            isHost: false
+          },
+          participants: [],
+          mainSpeaker: null,
+          showSidebar: true,
+          activeTab: 'chat',
+          messages: [],
+          newMessage: '',
+          unreadMessages: 0,
+          meetingDuration: 0,
+          currentTime: '',
+          isScreenSharing: false,
+          localStream: null,
+          webrtcClient: null,
+          signalingServerUrl: 'ws://localhost:8080',
+          isConnecting: false,
+          connectionError: null,
+          mediaStreams: {}
+        };
+      },
+      computed: {
+        otherParticipants() {
+          return this.participants.filter(p => p.id !== this.mainSpeaker?.id);
+        }
+      },
+      mounted() {
+        this.initializeMeeting();
+        this.updateTime();
+        setInterval(() => this.updateTime(), 1000);
+        setInterval(() => this.meetingDuration++, 1000);
+      },
+      updated() {
+        this.$nextTick(() => {
+          if (!this.mediaStreams) return;
+          for (let participant of this.participants) {
+             const stream = this.mediaStreams[participant.id];
+             if (stream) {
+               const videos = document.querySelectorAll(`video[data-userid="${participant.id}"]`);
+               videos.forEach(videoEl => {
+                 if (videoEl.srcObject !== stream) {
+                   videoEl.srcObject = stream;
+                 }
+               });
+             }
+          }
+        });
+      },
+      methods: {
+        async initializeMeeting() {
+          // Get meeting info from URL or session
+          const urlParams = new URLSearchParams(window.location.search);
+          const meetingId = urlParams.get('id');
+          
+          if (!meetingId) {
+            alert('No meeting ID provided');
+            window.location.href = 'dashboard.html';
+            return;
+          }
+          
+          await this.loadMeetingInfo(meetingId);
+          
+          // Get user info
+          const userStr = localStorage.getItem('meetdesk_user') || sessionStorage.getItem('meetdesk_user');
+          if (userStr) {
+            const user = JSON.parse(userStr);
+            this.localParticipant.name = user.name;
+            // Append a unique random string so the same user account can join from multiple tabs!
+            this.localParticipant.id = (user.email || 'user') + '-' + Date.now() + '-' + Math.floor(Math.random()*10000);
+          }
+          
+          // Apply pre-join toggles
+          if (urlParams.get('audio') === 'false') this.localParticipant.audioEnabled = false;
+          if (urlParams.get('video') === 'false') this.localParticipant.videoEnabled = false;
+          
+          // Initialize local media
+          await this.startLocalMedia();
+          
+          // Add local participant
+          this.participants.push(this.localParticipant);
+          this.mainSpeaker = this.participants[0];
+          
+          // Connect to WebRTC signaling server
+          await this.connectToSignalingServer(meetingId);
+        },
+        
+        async loadMeetingInfo(meetingId) {
+          try {
+            const API_URL = window.location.origin + '/MD/api';
+            const res = await fetch(`${API_URL}/meetings/get-meeting.php?meetingId=${meetingId}`);
+            const data = await res.json();
+            
+            if (data.meeting) {
+              this.meetingInfo = {
+                topic: data.meeting.topic,
+                meetingId: data.meeting.meetingId,
+                password: data.meeting.password
+              };
+            }
+          } catch (err) {
+            console.error('Failed to load meeting:', err);
+          }
+        },
+        
+        async startLocalMedia() {
+          try {
+            // Relax constraints to prevent capture failure on older laptops
+            this.localStream = await navigator.mediaDevices.getUserMedia({
+              video: true,
+              audio: true
+            });
+            
+            // Respect the Join Options natively by hard-muting tracks instantly
+            if (!this.localParticipant.audioEnabled) {
+              this.localStream.getAudioTracks().forEach(t => t.enabled = false);
+            }
+            if (!this.localParticipant.videoEnabled) {
+              this.localStream.getVideoTracks().forEach(t => t.enabled = false);
+            }
+            
+            // Immediately store exactly to our state to trigger reactive mapping to the videos
+            this.mediaStreams = this.mediaStreams || {};
+            this.mediaStreams[this.localParticipant.id] = this.localStream;
+            
+            // Attach securely via DOM just in case
+            this.$nextTick(() => {
+              const videos = document.querySelectorAll(`video[data-userid="${this.localParticipant.id}"]`);
+              videos.forEach(v => {
+                if (v.srcObject !== this.localStream) v.srcObject = this.localStream;
+              });
+            });
+            
+            // Set stream in WebRTC client if connected
+            if (this.webrtcClient) {
+              this.webrtcClient.setLocalStream(this.localStream);
+            }
+          } catch (err) {
+            console.error('Failed to get media:', err);
+            alert('Could not access camera/microphone. Please check permissions.');
+          }
+        },
+        
+        async connectToSignalingServer(roomId) {
+          try {
+            this.isConnecting = true;
+            this.connectionError = null;
+            
+            // Create WebRTC client
+            this.webrtcClient = new WebRTCClient(this.signalingServerUrl);
+            
+            // Set up event handlers
+            this.webrtcClient.onParticipantJoined = (participant) => {
+              console.log('Participant joined:', participant);
+              const existing = this.participants.find(p => p.id === participant.userId);
+              if (!existing) {
+                this.participants.push({
+                  id: participant.userId,
+                  name: participant.userName,
+                  audioEnabled: participant.audioEnabled,
+                  videoEnabled: participant.videoEnabled,
+                  isHost: false
+                });
+              }
+            };
+            
+            this.webrtcClient.onParticipantLeft = (data) => {
+              console.log('Participant left:', data);
+              const index = this.participants.findIndex(p => p.id === data.userId);
+              if (index !== -1) {
+                this.participants.splice(index, 1);
+              }
+              // Remove video element (Vue removes DOM, we just clean dictionary)
+              if (this.mediaStreams) {
+                delete this.mediaStreams[data.userId];
+              }
+            };
+            
+            this.webrtcClient.onRemoteStream = (userId, stream) => {
+              console.log('Remote stream received from:', userId);
+              
+              // Store properly in the dictionary so Vue can bind it anywhere!
+              this.mediaStreams = this.mediaStreams || {};
+              this.mediaStreams[userId] = stream;
+              
+              this.$nextTick(() => {
+                const videos = document.querySelectorAll(`video[data-userid="${userId}"]`);
+                videos.forEach(v => {
+                  if (v.srcObject !== stream) v.srcObject = stream;
+                });
+              });
+            };
+            
+            this.webrtcClient.onChatMessage = (data) => {
+              this.messages.push({
+                sender: data.userName,
+                text: data.message,
+                time: new Date(data.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+              });
+              
+              // Scroll to bottom
+              this.$nextTick(() => {
+                const chatEl = this.$refs.chatMessages;
+                if (chatEl) {
+                  chatEl.scrollTop = chatEl.scrollHeight;
+                }
+              });
+              
+              // Increment unread if sidebar is closed
+              if (!this.showSidebar || this.activeTab !== 'chat') {
+                this.unreadMessages++;
+              }
+            };
+            
+            this.webrtcClient.onMediaToggle = (data) => {
+              const participant = this.participants.find(p => p.id === data.userId);
+              if (participant) {
+                if (data.mediaType === 'audio') {
+                  participant.audioEnabled = data.enabled;
+                } else if (data.mediaType === 'video') {
+                  participant.videoEnabled = data.enabled;
+                }
+              }
+            };
+            
+            // Connect to signaling server
+            await this.webrtcClient.connect(
+              roomId,
+              this.localParticipant.id,
+              this.localParticipant.name
+            );
+            
+            // Set local stream
+            if (this.localStream) {
+              this.webrtcClient.setLocalStream(this.localStream);
+            }
+            
+            this.isConnecting = false;
+            console.log('✅ Connected to signaling server');
+            
+          } catch (err) {
+            console.error('Failed to connect to signaling server:', err);
+            this.connectionError = 'Could not connect to video server. You can still join but video may not work.';
+            this.isConnecting = false;
+          }
+        },
+        
+        toggleAudio() {
+          this.localParticipant.audioEnabled = !this.localParticipant.audioEnabled;
+          if (this.localStream) {
+            this.localStream.getAudioTracks().forEach(track => {
+              track.enabled = this.localParticipant.audioEnabled;
+            });
+          }
+          if (this.webrtcClient) {
+            this.webrtcClient.toggleAudio(this.localParticipant.audioEnabled);
+          }
+        },
+        
+        toggleVideo() {
+          this.localParticipant.videoEnabled = !this.localParticipant.videoEnabled;
+          if (this.localStream) {
+            this.localStream.getVideoTracks().forEach(track => {
+              track.enabled = this.localParticipant.videoEnabled;
+            });
+          }
+          if (this.webrtcClient) {
+            this.webrtcClient.toggleVideo(this.localParticipant.videoEnabled);
+          }
+        },
+        
+        async toggleScreenShare() {
+          if (this.isScreenSharing) {
+            // Stop screen sharing
+            this.isScreenSharing = false;
+            await this.startLocalMedia();
+          } else {
+            // Start screen sharing
+            try {
+              const screenStream = await navigator.mediaDevices.getDisplayMedia({
+                video: true
+              });
+              
+              this.isScreenSharing = true;
+              
+              // Keep old audio track so the user can still speak while showing screen!
+              if (this.localStream && this.localStream.getAudioTracks().length > 0) {
+                screenStream.addTrack(this.localStream.getAudioTracks()[0]);
+              }
+              
+              // Update our central video dictionary
+              this.mediaStreams = this.mediaStreams || {};
+              this.mediaStreams[this.localParticipant.id] = screenStream;
+              
+              // Replace video track natively for the local screens
+              this.$nextTick(() => {
+                const videos = document.querySelectorAll(`video[data-userid="${this.localParticipant.id}"]`);
+                videos.forEach(v => {
+                  if (v.srcObject !== screenStream) v.srcObject = screenStream;
+                });
+              });
+
+              // Push the new Video Screen stream explicitly to all WebRTC peers!
+              if (this.webrtcClient) {
+                this.webrtcClient.setLocalStream(screenStream);
+              }
+              
+              // Handle screen share stop (when they click "Stop Sharing" on the browser native popup)
+              screenStream.getVideoTracks()[0].onended = async () => {
+                if (this.isScreenSharing) {
+                  this.isScreenSharing = false;
+                  await this.startLocalMedia();
+                }
+              };
+            } catch (err) {
+              console.error('Screen share failed:', err);
+            }
+          }
+        },
+        
+        sendMessage() {
+          if (!this.newMessage.trim()) return;
+          
+          const message = {
+            sender: this.localParticipant.name,
+            text: this.newMessage,
+            time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+          };
+          
+          this.messages.push(message);
+          
+          // Send via WebRTC client
+          if (this.webrtcClient) {
+            this.webrtcClient.sendChatMessage(this.newMessage);
+          }
+          
+          this.newMessage = '';
+          
+          // Scroll to bottom
+          this.$nextTick(() => {
+            const chatEl = this.$refs.chatMessages;
+            if (chatEl) {
+              chatEl.scrollTop = chatEl.scrollHeight;
+            }
+          });
+        },
+        
+        setMainSpeaker(participant) {
+          this.mainSpeaker = participant;
+        },
+        
+        leaveMeeting() {
+          if (confirm('Are you sure you want to leave the meeting?')) {
+            // Leave WebRTC session
+            if (this.webrtcClient) {
+              this.webrtcClient.leave();
+            }
+            
+            // Stop all tracks
+            if (this.localStream) {
+              this.localStream.getTracks().forEach(track => track.stop());
+            }
+            
+            // Redirect to dashboard
+            window.location.href = 'dashboard.html';
+          }
+        },
+        
+        updateTime() {
+          const now = new Date();
+          this.currentTime = now.toLocaleTimeString('en-US', { 
+            hour: '2-digit', 
+            minute: '2-digit' 
+          });
+        },
+        
+        formatDuration(seconds) {
+          const hrs = Math.floor(seconds / 3600);
+          const mins = Math.floor((seconds % 3600) / 60);
+          const secs = seconds % 60;
+          
+          if (hrs > 0) {
+            return `${hrs}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+          }
+          return `${mins}:${secs.toString().padStart(2, '0')}`;
+        },
+        
+        // Watch for sidebar/tab changes to reset unread count
+        watchSidebar() {
+          if (this.showSidebar && this.activeTab === 'chat') {
+            this.unreadMessages = 0;
+          }
+        }
+      },
+      watch: {
+        showSidebar() {
+          this.watchSidebar();
+        },
+        activeTab() {
+          this.watchSidebar();
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

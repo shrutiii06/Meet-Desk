@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Meet Desk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    [v-cloak] { display: none; }
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+  <script src="js/api.js"></script>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="min-h-screen bg-[#E6F0FF] flex">
+      <div class="flex-1 flex items-center justify-center p-8">
+        <div class="bg-white rounded-2xl shadow-xl p-10 w-full max-w-md">
+          <div class="flex justify-center mb-6">
+            <div class="w-14 h-14 bg-[#4285F4] rounded-xl flex items-center justify-center shadow-md">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+              </svg>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-black text-center mb-8">Login To Your Account</h2>
+          
+          <div class="space-y-4 mb-4">
+            <div class="flex items-center bg-gray-100 rounded-xl px-4 py-3">
+              <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <input v-model="loginEmail" type="email" placeholder="Email" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500">
+            </div>
+            <div class="flex items-center bg-gray-100 rounded-xl px-4 py-3">
+              <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              <input v-model="loginPassword" :type="showPassword ? 'text' : 'password'" placeholder="Password" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500">
+              <button @click="showPassword = !showPassword" type="button" class="text-gray-500 hover:text-gray-700">
+                <svg v-if="!showPassword" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
+                </svg>
+                <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <input v-model="rememberMe" type="checkbox" id="remember" class="w-4 h-4 rounded border-2 border-[#4285F4] text-[#4285F4] focus:ring-[#4285F4]">
+              <label for="remember" class="ml-2 text-gray-700">Remember me</label>
+            </div>
+            <button @click="openForgotPasswordModal()" class="text-[#4285F4] text-sm hover:underline">Forgot Password?</button>
+          </div>
+          
+          <p v-if="successMessage" class="text-green-600 bg-green-50 border border-green-200 rounded-lg p-3 text-sm mb-4">{{ successMessage }}</p>
+          <p v-if="errorMessage" class="text-red-500 text-sm mb-4">{{ errorMessage }}</p>
+          <button @click="handleLogin" class="w-full bg-[#4285F4] text-white font-semibold py-3 rounded-xl hover:bg-[#3367D6] transition-colors mb-6">Sign in</button>
+          
+          <div class="relative mb-6">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center">
+              <span class="px-4 bg-white text-gray-500 text-sm">or continue with</span>
+            </div>
+          </div>
+          
+          <div class="flex justify-center gap-4 mb-6">
+            <button class="w-12 h-12 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:bg-[#166FE5] transition-colors">
+              <span class="font-bold text-lg">f</span>
+            </button>
+            <button class="w-12 h-12 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </button>
+            <button class="w-12 h-12 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors text-black">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </button>
+          </div>
+          
+          <p class="text-center text-gray-600">Don't have an account? <a href="register.html" class="text-[#4285F4] underline font-medium">Sign up</a></p>
+        </div>
+      </div>
+      
+          <!-- ===== FORGOT PASSWORD MODAL ===== -->
+      <div v-if="showForgotPasswordModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-2xl shadow-xl p-10 w-full max-w-sm">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-2xl font-bold text-black">Reset Password</h3>
+            <button @click="showForgotPasswordModal = false; resetForgotForm()" class="text-gray-500 hover:text-gray-700">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- ===== STEP 1: EMAIL VERIFICATION ===== -->
+          <div v-if="resetStep === 1" class="space-y-4">
+            <p class="text-gray-600 mb-6">Enter your email address and we'll send you a code to reset your password.</p>
+            
+            <div class="flex items-center bg-gray-100 rounded-xl px-4 py-3">
+              <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <input v-model="resetEmail" type="email" placeholder="Enter your email" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500">
+            </div>
+            
+            <p v-if="resetSuccessMessage" class="text-green-500 text-sm font-semibold">{{ resetSuccessMessage }}</p>
+            <p v-if="resetErrorMessage" class="text-red-500 text-sm">{{ resetErrorMessage }}</p>
+            
+            <button @click="sendResetCode" :disabled="resetLoading" class="w-full bg-[#4285F4] text-white font-semibold py-3 rounded-xl hover:bg-[#3367D6] transition-colors disabled:opacity-50">
+              {{ resetLoading ? 'Sending...' : 'Send Reset Code' }}
+            </button>
+          </div>
+          
+          <!-- ===== STEP 2: CODE & PASSWORD ===== -->
+          <div v-if="resetStep === 2" class="space-y-4">
+            <p class="text-gray-600 mb-6">Enter the code we sent to your email and your new password.</p>
+            
+            <div class="flex items-center bg-gray-100 rounded-xl px-4 py-3">
+              <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              <input v-model="resetCode" type="text" placeholder="Enter reset code" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500" maxlength="6">
+            </div>
+            
+            <div class="flex items-center bg-gray-100 rounded-xl px-4 py-3">
+              <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              <input v-model="resetNewPassword" :type="showResetPassword ? 'text' : 'password'" placeholder="New password" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500">
+              <button @click="showResetPassword = !showResetPassword" type="button" class="text-gray-500 hover:text-gray-700">
+                <svg v-if="!showResetPassword" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
+                </svg>
+                <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="flex items-center bg-gray-100 rounded-xl px-4 py-3">
+              <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              <input v-model="resetConfirmPassword" :type="showResetPassword ? 'text' : 'password'" placeholder="Confirm password" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500">
+            </div>
+            
+            <p v-if="resetErrorMessage" class="text-red-500 text-sm">{{ resetErrorMessage }}</p>
+            
+            <button @click="resetPassword" :disabled="resetLoading" class="w-full bg-[#4285F4] text-white font-semibold py-3 rounded-xl hover:bg-[#3367D6] transition-colors disabled:opacity-50 mb-2">
+              {{ resetLoading ? 'Resetting...' : 'Reset Password' }}
+            </button>
+            
+            <button @click="resetStep = 1; resetErrorMessage = ''" class="w-full bg-gray-200 text-gray-700 font-semibold py-3 rounded-xl hover:bg-gray-300 transition-colors">
+              Go Back
+            </button>
+          </div>
+          
+          <!-- ===== SUCCESS MESSAGE ===== -->
+          <div v-if="resetStep === 3" class="text-center space-y-4">
+            <div class="flex justify-center mb-4">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            </div>
+            <h4 class="text-xl font-bold text-green-600">Password Reset Successfully!</h4>
+            <p class="text-gray-600">Your password has been reset. You can now log in with your new password.</p>
+            <button @click="showForgotPasswordModal = false; resetForgotForm()" class="w-full bg-[#4285F4] text-white font-semibold py-3 rounded-xl hover:bg-[#3367D6] transition-colors">
+              Back to Login
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex-1 hidden lg:flex flex-col justify-center p-12 bg-[#E6F0FF]">
+        <h3 class="text-2xl font-bold text-black mb-2">Your Data, Safely Synced</h3>
+        <p class="text-gray-700 mb-8">Industry-leading security keeps<br>your team's information private.</p>
+        <div class="flex items-end justify-center mt-auto">
+          <div class="w-80 h-48 bg-gradient-to-br from-blue-200 to-blue-100 rounded-2xl flex items-center justify-center">
+            <svg class="w-32 h-32 text-[#4285F4] opacity-60" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          loginEmail: '',
+          loginPassword: '',
+          rememberMe: false,
+          showPassword: false,
+          errorMessage: '',
+          successMessage: '',
+          // Forgot Password
+          showForgotPasswordModal: false,
+          resetStep: 1,
+          resetEmail: '',
+          resetCode: '',
+          resetNewPassword: '',
+          resetConfirmPassword: '',
+          resetErrorMessage: '',
+          resetSuccessMessage: '',
+          resetLoading: false,
+          showResetPassword: false
+        };
+      },
+      mounted() {
+        // Check if user just registered
+        const registrationSuccess = sessionStorage.getItem('registration_success');
+        const registeredEmail = sessionStorage.getItem('registered_email');
+        
+        if (registrationSuccess === 'true' && registeredEmail) {
+          this.successMessage = '✓ Registration successful! Please login with your credentials.';
+          this.loginEmail = registeredEmail;
+          
+          // Clear the session storage
+          sessionStorage.removeItem('registration_success');
+          sessionStorage.removeItem('registered_email');
+          
+          // Clear success message after 5 seconds
+          setTimeout(() => {
+            this.successMessage = '';
+          }, 5000);
+        }
+      },
+      watch: {
+        showForgotPasswordModal(newVal) {
+          if (newVal) {
+            // Clear all messages when modal opens
+            this.$nextTick(() => {
+              this.resetErrorMessage = '';
+              this.resetSuccessMessage = '';
+              this.resetStep = 1;
+            });
+          }
+        }
+      },
+      methods: {
+        async handleLogin() {
+          this.errorMessage = '';
+          if (!this.loginEmail.trim()) {
+            this.errorMessage = 'Please enter your email.';
+            return;
+          }
+          if (!this.loginPassword) {
+            this.errorMessage = 'Please enter your password.';
+            return;
+          }
+          if (this.loginPassword.length < 6) {
+            this.errorMessage = 'Password must be at least 6 characters.';
+            return;
+          }
+          try {
+            const res = await fetch(`${API_URL}/auth/login.php`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: this.loginEmail.trim(),
+                password: this.loginPassword
+              })
+            });
+            const data = await res.json();
+            if (!res.ok) {
+              this.errorMessage = data.error || 'Login failed';
+              return;
+            }
+            const userData = JSON.stringify({
+              name: data.name,
+              email: data.email,
+              phone: data.phone,
+              profileImage: data.profileImage,
+              memberSince: data.memberSince
+            });
+            localStorage.setItem('meetdesk_user', userData);
+            sessionStorage.setItem('meetdesk_user', userData);
+            localStorage.setItem('meetdesk_member_since_' + data.email, new Date(data.memberSince).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }));
+            window.location.href = 'dashboard.html';
+          } catch (err) {
+            console.error('Login error:', err);
+            console.error('API_URL:', API_URL);
+            this.errorMessage = 'Could not connect to server. Make sure the backend is running.';
+          }
+        },
+        
+        // ===== SEND RESET CODE =====
+        async sendResetCode() {
+          this.resetErrorMessage = '';
+          this.resetSuccessMessage = '';
+          this.resetLoading = false;
+          
+          if (!this.resetEmail.trim()) {
+            this.resetErrorMessage = 'Please enter your email address.';
+            return;
+          }
+          
+          this.resetLoading = true;
+          this.resetErrorMessage = '';
+          this.resetSuccessMessage = '';
+          
+          try {
+            console.log('Reset code - API_URL:', API_URL);
+            console.log('Reset code - Email:', this.resetEmail);
+            
+            const url = `${API_URL}/auth/send-reset-code.php`;
+            console.log('Reset code - Full URL:', url);
+            
+            const response = await fetch(url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email: this.resetEmail.trim() })
+            });
+            
+            const data = await response.json();
+            console.log('Reset code response:', { status: response.status, data });
+            
+            if (response.ok && data && data.success === true) {
+              // Success!
+              this.resetErrorMessage = '';
+              this.resetSuccessMessage = '✅ Reset code sent to your email! Check your inbox.';
+              this.resetLoading = false;
+              
+              setTimeout(() => {
+                this.resetStep = 2;
+                this.resetSuccessMessage = '';
+              }, 2000);
+            } else {
+              // Error
+              this.resetLoading = false;
+              this.resetErrorMessage = (data && data.message) ? data.message : 'Failed to send reset code';
+              console.error('Error response:', data);
+            }
+          } catch (err) {
+            this.resetLoading = false;
+            console.error('Reset code fetch error:', err);
+            console.error('API_URL value:', typeof API_URL, API_URL);
+            this.resetErrorMessage = 'Network error: ' + err.message;
+          }
+        },
+        
+        // ===== RESET PASSWORD =====
+        async resetPassword() {
+          this.resetErrorMessage = '';
+          
+          if (!this.resetCode.trim()) {
+            this.resetErrorMessage = 'Please enter the reset code.';
+            return;
+          }
+          
+          if (!this.resetNewPassword) {
+            this.resetErrorMessage = 'Please enter a new password.';
+            return;
+          }
+          
+          if (this.resetNewPassword.length < 6) {
+            this.resetErrorMessage = 'Password must be at least 6 characters.';
+            return;
+          }
+          
+          if (this.resetNewPassword !== this.resetConfirmPassword) {
+            this.resetErrorMessage = 'Passwords do not match.';
+            return;
+          }
+          
+          this.resetLoading = true;
+          try {
+            console.log('Resetting password with code:', this.resetCode);
+            
+            const res = await fetch(`${API_URL}/auth/reset-password.php`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: this.resetEmail.trim(),
+                code: this.resetCode.trim(),
+                password: this.resetNewPassword
+              })
+            });
+            const data = await res.json();
+            
+            console.log('Reset password response:', { status: res.status, data });
+            
+            if (res.ok && data.success) {
+              this.resetLoading = false;
+              this.resetStep = 3;
+              setTimeout(() => {
+                this.showForgotPasswordModal = false;
+                this.resetForgotForm();
+              }, 2000);
+            } else {
+              this.resetLoading = false;
+              this.resetErrorMessage = data.message || 'Failed to reset password';
+              console.error('Reset failed:', data);
+            }
+          } catch (err) {
+            this.resetLoading = false;
+            console.error('Reset password fetch error:', err);
+            this.resetErrorMessage = 'Network error: ' + err.message;
+          }
+        },
+        
+        // ===== RESET FORM =====
+        resetForgotForm() {
+          this.resetStep = 1;
+          this.resetEmail = '';
+          this.resetCode = '';
+          this.resetNewPassword = '';
+          this.resetConfirmPassword = '';
+          this.resetErrorMessage = '';
+          this.resetSuccessMessage = '';
+          this.resetLoading = false;
+          this.showResetPassword = false;
+        },
+        
+        // ===== OPEN FORGOT PASSWORD MODAL =====
+        openForgotPasswordModal() {
+          this.resetErrorMessage = '';
+          this.resetSuccessMessage = '';
+          this.resetStep = 1;
+          this.resetEmail = '';
+          this.resetCode = '';
+          this.resetNewPassword = '';
+          this.resetConfirmPassword = '';
+          this.showForgotPasswordModal = true;
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Meet Desk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    [v-cloak] { display: none; }
+    body { font-family: 'Inter', sans-serif; margin: 0; }
+    /* Prevent scrollbar from causing layout shift */
+    html { scrollbar-gutter: stable; overflow-y: scroll; }
+    .sidebar-scroll { scrollbar-gutter: stable; }
+    /* Ensure main content area and flex layout are properly constrained */
+    .min-h-screen { min-height: 100vh; }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .sidebar-desktop { display: none; }
+      .mobile-header { display: flex; }
+    }
+    @media (min-width: 769px) {
+      .sidebar-desktop { display: flex; }
+      .mobile-header { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div @click="showProfile = false" v-if="showProfile" class="fixed inset-0 z-40" style="background: transparent;"></div>
+    
+    <!-- Mobile Header -->
+    <header class="mobile-header bg-white shadow-sm px-4 py-3 items-center justify-between sticky top-0 z-30">
+      <div class="flex items-center gap-3">
+        <button @click="showMobileMenu = !showMobileMenu" class="p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6 text-[#4285F4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+          </svg>
+          <span class="font-semibold text-gray-800">Meet Desk</span>
+        </div>
+      </div>
+      <a v-if="currentUser" href="profile.html" class="p-2">
+        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+        </svg>
+      </a>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div v-if="showMobileMenu" @click="showMobileMenu = false" class="fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+    <aside v-if="showMobileMenu" class="fixed left-0 top-0 bottom-0 w-64 bg-white shadow-xl z-50 md:hidden transform transition-transform">
+      <div class="p-4 border-b">
+        <div class="flex items-center justify-between">
+          <span class="font-semibold text-gray-800">Menu</span>
+          <button @click="showMobileMenu = false" class="p-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav class="p-4 space-y-2">
+        <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-50 text-[#4285F4]">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <span class="font-medium">Home</span>
+        </a>
+        <a href="schedule.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <span class="font-medium">Schedule</span>
+        </a>
+        <a v-if="currentUser" href="profile.html" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+          </svg>
+          <span class="font-medium">Profile</span>
+        </a>
+      </nav>
+    </aside>
+    
+    <div class="min-h-screen flex bg-[#EBF5FF]">
+      <!-- Desktop Sidebar -->
+      <aside class="sidebar-desktop w-20 flex-col items-center py-6 bg-[#D6EBFF]">
+        <div class="mb-8">
+          <div class="w-10 h-10 flex items-center justify-center text-gray-700">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+        </div>
+        <nav class="flex flex-col gap-6">
+          <a href="dashboard.html" class="w-12 h-12 rounded-full bg-[#4285F4] flex items-center justify-center text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </a>
+          <a href="schedule.html" class="w-12 h-12 rounded-full flex items-center justify-center text-gray-600 hover:bg-white/50 transition-colors" title="Scheduled Meetings">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </a>
+          <div class="relative mt-auto">
+            <a v-if="currentUser" href="profile.html" class="w-12 h-12 rounded-full flex items-center justify-center text-gray-600 hover:bg-white/50 transition-colors" title="Profile">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </a>
+            <template v-else>
+              <button @click="showProfile = !showProfile" class="w-12 h-12 rounded-full flex items-center justify-center text-gray-600 hover:bg-white/50 transition-colors" title="Profile">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </button>
+              <div v-if="showProfile" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 p-4 z-50">
+                <div class="space-y-2">
+                  <a href="login.html" class="block w-full py-2 text-center bg-[#4285F4] text-white rounded-lg font-medium hover:bg-[#3367D6]">Sign in</a>
+                  <a href="register.html" class="block w-full py-2 text-center border border-[#4285F4] text-[#4285F4] rounded-lg font-medium hover:bg-blue-50">Sign up</a>
+                </div>
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-r border-b border-gray-100 transform rotate-45"></div>
+              </div>
+            </template>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex flex-col lg:flex-row">
+        <div class="flex-1 flex flex-col items-center justify-center p-4 md:p-8 min-h-[50vh] lg:min-h-0">
+          <div class="grid grid-cols-2 gap-4 md:gap-8 max-w-md w-full">
+            <button @click="handleNewMeeting" class="flex flex-col items-center group">
+              <div class="w-20 h-20 md:w-24 md:h-24 bg-[#4285F4] rounded-xl flex items-center justify-center shadow-lg group-hover:bg-[#3367D6] transition-colors mb-2 md:mb-3">
+                <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium text-sm md:text-base">New Meeting</span>
+            </button>
+            <button @click="handleJoin" class="flex flex-col items-center group">
+              <div class="w-20 h-20 md:w-24 md:h-24 bg-[#4285F4] rounded-xl flex items-center justify-center shadow-lg group-hover:bg-[#3367D6] transition-colors mb-2 md:mb-3">
+                <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium text-sm md:text-base">Join</span>
+            </button>
+            <button @click="handleSchedule" class="col-span-2 flex flex-col items-center group">
+              <div class="w-20 h-20 md:w-24 md:h-24 bg-[#4285F4] rounded-xl flex items-center justify-center shadow-lg group-hover:bg-[#3367D6] transition-colors mb-2 md:mb-3">
+                <svg class="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <span class="text-gray-700 font-medium text-sm md:text-base">Schedule</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Panel - Calendar -->
+        <aside class="w-full lg:w-80 border-t lg:border-t-0 lg:border-l border-blue-100 p-4 lg:p-6 flex flex-col bg-[#D6EBFF] lg:overflow-y-auto sidebar-scroll">
+          <div class="bg-white rounded-xl p-6 shadow-sm mb-6">
+            <p class="text-2xl font-bold text-gray-800">{{ currentTime }}</p>
+            <p class="text-gray-600 mt-1">{{ currentDate }}</p>
+          </div>
+
+          <!-- Search and Filters Section -->
+          <div class="mb-6 space-y-3">
+            <!-- Search Input -->
+            <div class="relative">
+              <input 
+                v-model="searchTerm"
+                @input="performSearch"
+                type="text"
+                placeholder="Search by topic..."
+                class="w-full px-3 py-2 pl-9 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+              >
+              <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div>
+
+            <!-- Date Range Filters -->
+            <details class="group">
+              <summary class="cursor-pointer flex items-center gap-2 text-xs font-semibold text-gray-700 hover:text-[#4285F4]">
+                <svg class="w-4 h-4 group-open:rotate-90 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                Filter by Date
+              </summary>
+              <div class="mt-2 space-y-2 pl-2">
+                <div>
+                  <label class="text-xs text-gray-600">From:</label>
+                  <input 
+                    v-model="filterFromDate"
+                    @change="performSearch"
+                    type="date"
+                    class="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-[#4285F4]"
+                  >
+                </div>
+                <div>
+                  <label class="text-xs text-gray-600">To:</label>
+                  <input 
+                    v-model="filterToDate"
+                    @change="performSearch"
+                    type="date"
+                    class="w-full px-2 py-1 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-[#4285F4]"
+                  >
+                </div>
+                <button 
+                  v-if="searchTerm || filterFromDate || filterToDate"
+                  @click="clearSearch"
+                  class="w-full px-2 py-1 text-xs text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            </details>
+          </div>
+
+          <!-- Today's Date Section -->
+          <div class="mb-6">
+            <!-- Calendar Toggle -->
+            <button @click="showCalendar = !showCalendar" class="flex items-center gap-2 hover:text-[#4285F4] transition">
+              <p class="text-lg font-bold text-gray-800">Today</p>
+              <svg class="w-5 h-5 text-[#4285F4] transition-transform" :class="{ 'rotate-180': showCalendar }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+
+            <!-- Calendar Picker - Shows when arrow is clicked -->
+            <div v-if="showCalendar" class="mt-4 bg-white rounded-xl shadow-lg p-5 border border-gray-200">
+              <!-- Month/Year Header -->
+              <div class="flex items-center justify-between mb-5">
+                <button @click="prevMonth" class="p-2 hover:bg-gray-100 rounded-lg transition">
+                  <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <span class="text-base font-bold text-gray-800 min-w-fit">{{ monthYear }}</span>
+                <button @click="nextMonth" class="p-2 hover:bg-gray-100 rounded-lg transition">
+                  <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Weekday Headers -->
+              <div class="grid grid-cols-7 gap-1 mb-3">
+                <div v-for="day in ['S', 'M', 'T', 'W', 'T', 'F', 'S']" :key="day" class="text-center text-xs font-bold text-gray-600 py-2">
+                  {{ day }}
+                </div>
+              </div>
+
+              <!-- Calendar Days -->
+              <div class="grid grid-cols-7 gap-2">
+                <button 
+                  v-for="(day, index) in calendarDays" 
+                  :key="index"
+                  @click="selectDate(day)"
+                  :disabled="!day.isCurrentMonth || day.isPast"
+                  :class="{
+                    'text-gray-300 cursor-not-allowed': !day.isCurrentMonth,
+                    'text-gray-400 cursor-not-allowed': day.isPast && day.isCurrentMonth,
+                    'text-gray-700 hover:bg-blue-100': day.isCurrentMonth && !day.isPast,
+                    'bg-[#4285F4] text-white font-bold shadow-md': day.isToday,
+                    'cursor-pointer': day.isCurrentMonth && !day.isPast
+                  }"
+                  class="h-9 text-sm rounded-lg flex items-center justify-center transition font-medium"
+                >
+                  {{ day.day }}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scheduled Meetings List -->
+          <div class="flex-1 flex flex-col">
+            <h3 v-if="!showCalendar" class="text-gray-700 font-semibold mb-3 text-sm">Meetings</h3>
+            <div v-if="todayMeetings.length === 0 && !showCalendar" class="flex-1 flex flex-col items-center justify-center text-center">
+              <p class="text-gray-500 mb-4">No meetings scheduled today. Enjoy your day!</p>
+              <a href="#" @click.prevent="handleSchedule" class="flex items-center gap-2 text-[#4285F4] font-medium hover:underline">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                Schedule your meeting
+              </a>
+            </div>
+            <div v-else-if="!showCalendar" class="space-y-3">
+              <div 
+                v-for="meeting in todayMeetings" 
+                :key="meeting._id"
+                class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 hover:shadow-md transition"
+              >
+                <div class="flex justify-between items-start gap-2">
+                  <div class="flex-1 min-w-0">
+                    <p class="font-semibold text-gray-800 text-sm">{{ meeting.topic }}</p>
+                    <p class="text-xs text-gray-600 mt-1">{{ formatTime(meeting.time) }} - {{ calculateEndTime(meeting.time, meeting.duration) }}</p>
+                    <p class="text-xs text-gray-500 mt-1">Meet ID: {{ meeting.meetingId }}</p>
+                  </div>
+                  <div class="flex gap-1 items-start">
+                    <button @click="startMeeting(meeting)" class="px-3 py-1 bg-[#4285F4] text-white text-xs rounded-lg hover:bg-[#3367D6] transition whitespace-nowrap">
+                      Join
+                    </button>
+                    
+                    <!-- Three-dot Menu -->
+                    <div class="relative" data-menu-container>
+                      <button 
+                        @click="showMeetingMenu(meeting._id)"
+                        class="p-1 hover:bg-gray-100 rounded-lg transition"
+                        title="More options"
+                      >
+                        <svg class="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 8c1.1 0 2-0.9 2-2s-0.9-2-2-2-2 0.9-2 2 0.9 2 2 2zm0 2c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2zm0 6c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z"/>
+                        </svg>
+                      </button>
+                      
+                      <!-- Dropdown Menu -->
+                      <div 
+                        v-if="activeMeetingMenu === meeting._id"
+                        class="absolute right-0 mt-1 w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-50"
+                      >
+                        <button 
+                          @click="showMeetingDetails(meeting)"
+                          class="w-full text-left px-3 py-2 hover:bg-gray-50 text-gray-700 font-medium text-xs border-b border-gray-100 flex items-center gap-2 transition"
+                        >
+                          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                          Details
+                        </button>
+                        <button 
+                          @click="editMeeting(meeting)"
+                          class="w-full text-left px-3 py-2 hover:bg-blue-50 text-gray-700 font-medium text-xs border-b border-gray-100 flex items-center gap-2 transition"
+                        >
+                          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                          </svg>
+                          Edit
+                        </button>
+                        <button 
+                          @click="shareMeetingLink(meeting)"
+                          class="w-full text-left px-3 py-2 hover:bg-gray-50 text-gray-700 font-medium text-xs border-b border-gray-100 flex items-center gap-2 transition"
+                        >
+                          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.469 9 12c0-2.21-1.791-4-4-4-2.209 0-4 1.79-4 4 0 2.209 1.791 4 4 4 .469 0 .938-.114 1.342-.216m9.958-4.6c.092.469.153.954.153 1.457 0 2.209-1.791 4-4 4-.513 0-.988-.061-1.457-.153m0 0a9.966 9.966 0 001.457-9.176m6.048 6.048c.215-.215.432-.428.648-.642m0 0a9.967 9.967 0 00-9.176-1.457m0 0a9.968 9.968 0 019.176 1.457"/>
+                          </svg>
+                          Share
+                        </button>
+                        <button 
+                          @click="deleteMeeting(meeting._id)"
+                          class="w-full text-left px-3 py-2 hover:bg-red-50 text-red-600 font-medium text-xs flex items-center gap-2 transition"
+                        >
+                          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                          </svg>
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        </aside>
+      </main>
+    </div>
+
+    <!-- Meeting Details Modal -->
+    <div v-if="showMeetingDetailsModal" @click.self="showMeetingDetailsModal = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Meeting Details</h2>
+        <div v-if="selectedMeeting" class="space-y-4">
+          <div>
+            <p class="text-sm text-gray-600">Date</p>
+            <p class="font-semibold text-gray-800">{{ new Date(selectedMeeting.date).toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}) }}</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Hours</p>
+            <p class="font-semibold text-gray-800">{{ formatTime(selectedMeeting.time) }} - {{ calculateEndTime(selectedMeeting.time, selectedMeeting.duration) }}</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Topic</p>
+            <p class="font-semibold text-gray-800">{{ selectedMeeting.topic }}</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Duration</p>
+            <p class="font-semibold text-gray-800">{{ selectedMeeting.duration }} minutes</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Time Zone</p>
+            <p class="font-semibold text-gray-800">{{ selectedMeeting.timezone }}</p>
+          </div>
+          <div>
+            <p class="text-sm text-gray-600">Repeat</p>
+            <p class="font-semibold text-gray-800">{{ selectedMeeting.repeat }}</p>
+          </div>
+          <div class="flex gap-3 pt-6 border-t border-gray-200">
+            <button @click="startMeeting(selectedMeeting)" class="flex-1 py-2 bg-[#4285F4] text-white rounded-lg hover:bg-[#3367D6] transition font-medium">
+              Join
+            </button>
+            <button @click="showMeetingDetailsModal = false" class="flex-1 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition font-medium">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div v-if="showDeleteConfirm" @click.self="showDeleteConfirm = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
+        <h2 class="text-xl font-bold text-gray-800 mb-2">Delete this meeting?</h2>
+        <p class="text-gray-600 mb-6">Are you sure you want to delete this scheduled this meeting</p>
+        <div class="flex gap-3">
+          <button @click="confirmDelete" class="flex-1 py-2 bg-[#4285F4] text-white rounded-lg hover:bg-[#3367D6] transition font-medium">
+            Delete
+          </button>
+          <button @click="showDeleteConfirm = false" class="flex-1 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition font-medium">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scheduled Meetings Modal (Calendar Sidebar) -->
+    <div v-if="showScheduledMeetingsModal" @click.self="showScheduledMeetingsModal = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-end z-50">
+      <div class="bg-white w-full md:w-96 h-screen md:h-auto md:rounded-2xl shadow-xl overflow-hidden flex flex-col">
+        <!-- Header -->
+        <div class="bg-[#4285F4] text-white p-6 flex justify-between items-center">
+          <h2 class="text-2xl font-bold">Scheduled Meeting</h2>
+          <button @click="showScheduledMeetingsModal = false" class="text-white hover:bg-blue-600 p-2 rounded-lg transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Meetings List -->
+        <div class="flex-1 overflow-y-auto">
+          <div v-if="groupedMeetings.length === 0" class="p-6 text-center text-gray-500">
+            <p>No meetings scheduled. Enjoy your day!</p>
+          </div>
+          <div v-else>
+            <!-- Group by Date -->
+            <div v-for="dateGroup in groupedMeetings" :key="dateGroup.date">
+              <!-- Date Header -->
+              <div class="sticky top-0 bg-gray-100 px-6 py-3 border-b border-gray-200">
+                <p class="font-semibold text-gray-700 text-sm">{{ dateGroup.dateLabel }}</p>
+              </div>
+              
+              <!-- Meetings for this date -->
+              <div class="divide-y divide-gray-200">
+                <div 
+                  v-for="meeting in dateGroup.meetings" 
+                  :key="meeting._id"
+                  class="px-6 py-4 hover:bg-gray-50 transition cursor-pointer border-l-4 border-l-[#4285F4]"
+                >
+                  <div class="flex justify-between items-start gap-3">
+                    <div class="flex-1">
+                      <p class="font-bold text-gray-800">{{ formatTime(meeting.time) }}</p>
+                      <p class="text-gray-700 font-semibold mt-1">{{ meeting.topic }}</p>
+                      <p class="text-xs text-gray-500 mt-2">Meeting ID : {{ meeting.meetingId }}</p>
+                      <p class="text-xs text-gray-400 mt-1">Duration: {{ meeting.duration }} minutes</p>
+                    </div>
+                    <button @click="startMeeting(meeting)" class="px-4 py-2 bg-[#4285F4] text-white text-sm rounded-lg hover:bg-[#3367D6] transition font-medium whitespace-nowrap">
+                      Join
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Meeting Modal -->
+    <div v-if="showEditModal" @click.self="showEditModal = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Edit Meeting</h2>
+        
+        <div v-if="editingMeeting" class="space-y-4">
+          <!-- Topic -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Topic</label>
+            <input 
+              v-model="editForm.topic"
+              type="text"
+              placeholder="Meeting topic"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+            >
+          </div>
+
+          <!-- Description -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Description</label>
+            <textarea 
+              v-model="editForm.description"
+              placeholder="Meeting description"
+              rows="2"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+            ></textarea>
+          </div>
+
+          <!-- Date -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Date</label>
+            <input 
+              v-model="editForm.date"
+              type="date"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+            >
+          </div>
+
+          <!-- Time -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Time</label>
+            <input 
+              v-model="editForm.time"
+              type="time"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+            >
+          </div>
+
+          <!-- Duration -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Duration</label>
+            <select 
+              v-model="editForm.duration"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+            >
+              <option value="30">30 minutes</option>
+              <option value="45">45 minutes</option>
+              <option value="60">60 minutes</option>
+              <option value="90">90 minutes</option>
+              <option value="120">120 minutes</option>
+            </select>
+          </div>
+
+          <!-- Error/Success Messages -->
+          <div v-if="editErrorMessage" class="p-3 bg-red-100 border border-red-300 rounded-lg text-red-700 text-sm">
+            {{ editErrorMessage }}
+          </div>
+          <div v-if="editSuccessMessage" class="p-3 bg-green-100 border border-green-300 rounded-lg text-green-700 text-sm">
+            {{ editSuccessMessage }}
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex gap-3 pt-6 border-t border-gray-200">
+            <button @click="updateMeeting" class="flex-1 py-2 bg-[#4285F4] text-white rounded-lg hover:bg-[#3367D6] transition font-medium text-sm">
+              Save Changes
+            </button>
+            <button @click="showEditModal = false" class="flex-1 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition font-medium text-sm">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Meeting Modal -->
+    <div v-if="showShareModal" @click.self="showShareModal = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Share Meeting</h2>
+        <p class="text-gray-600 text-sm mb-6">Choose how you'd like to share this meeting</p>
+        
+        <div v-if="shareModalInfo" class="space-y-3">
+          <!-- WhatsApp Share -->
+          <button 
+                type="button"
+                @click="shareToWhatsApp"
+                class="w-full flex items-center gap-3 px-4 py-3 border border-green-200 rounded-lg hover:bg-green-50 transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.656.738 5.25 2.14 7.512l-2.255 6.236 6.4-2.095A9.82 9.82 0 0012 22c5.51 0 10-4.49 10-10S17.51 2 12 2z"/>
+                </svg>
+                <div class="text-left">
+                  <p class="font-semibold text-gray-800">Share on WhatsApp</p>
+                  <p class="text-xs text-gray-500">Send via WhatsApp</p>
+                </div>
+              </button>
+
+              <!-- Email Share -->
+              <button 
+                type="button"
+                @click="shareToEmail"
+                class="w-full flex items-center gap-3 px-4 py-3 border border-blue-200 rounded-lg hover:bg-blue-50 transition"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div class="text-left">
+                  <p class="font-semibold text-gray-800">Share via Email</p>
+                  <p class="text-xs text-gray-500">Open your email client</p>
+                </div>
+              </button>
+
+              <!-- Copy Link -->
+              <button 
+                type="button"
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <div class="text-left">
+              <p class="font-semibold text-gray-800">Copy Details</p>
+              <p class="text-xs text-gray-500">Copy to clipboard</p>
+            </div>
+          </button>
+        </div>
+
+        <div class="flex gap-3 pt-6 border-t border-gray-200">
+          <button @click="showShareModal = false" class="w-full py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition font-medium text-sm">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email Form Modal -->
+    <div v-if="showEmailForm" @click.self="showEmailForm = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Send Meeting Invitation</h2>
+        <p class="text-gray-600 text-sm mb-6">Enter the recipient's email address</p>
+        
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-2">Recipient Email</label>
+            <input 
+              v-model="emailRecipient"
+              type="email"
+              placeholder="recipient@example.com"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285F4] text-sm"
+            >
+          </div>
+          
+          <div v-if="emailMessage" :class="[
+            'p-3 rounded-lg text-sm',
+            emailMessage.includes('sent') || emailMessage.includes('success') ? 'bg-green-100 border border-green-300 text-green-700' : 'bg-red-100 border border-red-300 text-red-700'
+          ]">
+            {{ emailMessage }}
+          </div>
+
+          <div class="flex gap-3 pt-4">
+            <button 
+              type="button"
+              @click="sendMeetingEmail"
+              :disabled="emailSending"
+              :class="['flex-1 py-2 text-white rounded-lg transition font-medium text-sm', emailSending ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#4285F4] hover:bg-[#3367D6]']"
+            >
+              {{ emailSending ? 'Sending...' : 'Send' }}
+            </button>
+            <button 
+              type="button"
+              @click="showEmailForm = false"
+              class="flex-1 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition font-medium text-sm"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          showMobileMenu: false,
+          currentTime: '',
+          currentDate: '',
+          timeInterval: null,
+          refreshInterval: null,
+          showProfile: false,
+          currentUser: null,
+          showCalendar: false,
+          currentMonth: new Date(),
+          calendarDays: [],
+          monthYear: '',
+          meetings: [],
+          searchTerm: '',
+          filterFromDate: '',
+          filterToDate: '',
+          activeMeetingMenu: null,
+          selectedMeeting: null,
+          showMeetingDetailsModal: false,
+          showDeleteConfirm: false,
+          deleteConfirmId: null,
+          showScheduledMeetingsModal: false,
+          showEditModal: false,
+          editingMeeting: null,
+          editForm: {
+            topic: '',
+            description: '',
+            date: '',
+            time: '',
+            duration: '60'
+          },
+          editErrorMessage: '',
+          editSuccessMessage: '',
+          showShareModal: false,
+          shareModalInfo: null,
+          showEmailForm: false,
+          emailRecipient: '',
+          emailSending: false,
+          emailMessage: ''
+        };
+      },
+      mounted() {
+        const userStr = localStorage.getItem('meetdesk_user') || sessionStorage.getItem('meetdesk_user');
+        if (userStr) {
+          try {
+            this.currentUser = JSON.parse(userStr);
+            this.loadMeetings();  // Load meetings for this user
+          } catch (e) {
+            this.currentUser = null;
+          }
+        }
+        this.updateTime();
+        this.generateCalendar();
+        this.timeInterval = setInterval(() => this.updateTime(), 1000);
+        
+        // Refresh meetings every 5 seconds to automatically hide expired ones within seconds of expiration
+        this.refreshInterval = setInterval(() => {
+          this.loadMeetings();
+        }, 5000);
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('[data-menu-container]')) {
+            this.activeMeetingMenu = null;
+          }
+        });
+      },
+      beforeUnmount() {
+        if (this.timeInterval) clearInterval(this.timeInterval);
+        if (this.refreshInterval) clearInterval(this.refreshInterval);
+      },
+      computed: {
+        groupedMeetings() {
+          // ===== GROUP MEETINGS BY DATE =====
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          
+          const groups = {};
+          
+          this.meetings.forEach(meeting => {
+            const meetingDate = new Date(meeting.date);
+            meetingDate.setHours(0, 0, 0, 0);
+            
+            const dateKey = meeting.date;  // YYYY-MM-DD format
+            if (!groups[dateKey]) {
+              groups[dateKey] = {
+                date: dateKey,
+                dateLabel: this.getDateLabel(meetingDate, today),
+                meetings: []
+              };
+            }
+            groups[dateKey].meetings.push(meeting);
+          });
+          
+          // ===== SORT BY DATE AND RETURN AS ARRAY =====
+          return Object.values(groups)
+            .sort((a, b) => new Date(a.date) - new Date(b.date));
+        },
+        todayMeetings() {
+          // ===== GET ALL UPCOMING MEETINGS (TODAY AND FUTURE) =====
+          const today = new Date();
+          const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+          const now = new Date();
+          
+          return this.meetings.filter(meeting => {
+            // Filter meetings that are in the future or ongoing
+            if (meeting.date > todayStr) {
+              // Future date, keep it
+              return true;
+            }
+            
+            if (meeting.date === todayStr) {
+              // Today's meeting - check if it hasn't expired yet
+              const [hours, minutes] = meeting.time.split(':');
+              const meetingStart = new Date();
+              meetingStart.setHours(parseInt(hours), parseInt(minutes), 0);
+              
+              const meetingEnd = new Date(meetingStart);
+              meetingEnd.setMinutes(meetingEnd.getMinutes() + parseInt(meeting.duration));
+              
+              // Keep only if meeting hasn't ended yet
+              return now < meetingEnd;
+            }
+            
+            return false; // Past meetings
+          })
+            .sort((a, b) => {
+              // Sort by date first, then by time
+              if (a.date !== b.date) return a.date.localeCompare(b.date);
+              return a.time.localeCompare(b.time);
+            });
+        }
+      },
+      methods: {
+        updateTime() {
+          const now = new Date();
+          this.currentTime = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+          this.currentDate = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+        },
+        generateCalendar() {
+          // ===== GET FIRST AND LAST DAY OF MONTH =====
+          const year = this.currentMonth.getFullYear();
+          const month = this.currentMonth.getMonth();
+          const firstDay = new Date(year, month, 1);
+          const lastDay = new Date(year, month + 1, 0);
+          const prevLastDay = new Date(year, month, 0);
+
+          // ===== UPDATE MONTH/YEAR DISPLAY =====
+          this.monthYear = firstDay.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+          // ===== GET TODAY DATE FOR COMPARISON =====
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+
+          const days = [];
+
+          // ===== PREVIOUS MONTH DAYS =====
+          const prevDaysCount = firstDay.getDay();
+          for (let i = prevDaysCount - 1; i >= 0; i--) {
+            const day = prevLastDay.getDate() - i;
+            days.push({
+              day: day,
+              isCurrentMonth: false,
+              isPast: true,
+              isToday: false,
+              fullDate: ''
+            });
+          }
+
+          // ===== CURRENT MONTH DAYS =====
+          for (let i = 1; i <= lastDay.getDate(); i++) {
+            const date = new Date(year, month, i);
+            date.setHours(0, 0, 0, 0);
+            const isPast = date < today;
+            const isToday = date.getTime() === today.getTime();
+            // FIX: Use local date format (YYYY-MM-DD) instead of UTC toISOString() to avoid timezone offset issues
+            const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+
+            days.push({
+              day: i,
+              isCurrentMonth: true,
+              isPast: isPast,
+              isToday: isToday,
+              fullDate: fullDate
+            });
+          }
+
+          // ===== NEXT MONTH DAYS =====
+          const remainingDays = 42 - days.length;
+          for (let i = 1; i <= remainingDays; i++) {
+            days.push({
+              day: i,
+              isCurrentMonth: false,
+              isPast: true,
+              isToday: false,
+              fullDate: ''
+            });
+          }
+
+          this.calendarDays = days;
+        },
+        prevMonth() {
+          // ===== GO TO PREVIOUS MONTH =====
+          this.currentMonth = new Date(this.currentMonth.getFullYear(), this.currentMonth.getMonth() - 1, 1);
+          this.generateCalendar();
+        },
+        nextMonth() {
+          // ===== GO TO NEXT MONTH =====
+          this.currentMonth = new Date(this.currentMonth.getFullYear(), this.currentMonth.getMonth() + 1, 1);
+          this.generateCalendar();
+        },
+        selectDate(date) {
+          // ===== ONLY ALLOW FUTURE DATES =====
+          if (!date.isCurrentMonth || date.isPast) {
+            return;
+          }
+
+          // ===== REDIRECT TO SCHEDULE PAGE WITH SELECTED DATE =====
+          window.location.href = `schedule.html?date=${date.fullDate}`;
+        },
+        handleNewMeeting() {
+          if (!this.currentUser) {
+            window.location.href = 'register.html';
+            return;
+          }
+          window.location.href = 'schedule.html';
+        },
+        handleJoin() {
+          if (!this.currentUser) {
+            window.location.href = 'register.html';
+            return;
+          }
+          window.location.href = 'join.html';
+        },
+        handleSchedule() {
+          if (!this.currentUser) {
+            window.location.href = 'register.html';
+            return;
+          }
+          window.location.href = 'schedule.html';
+        },
+        handleLogout() {
+          localStorage.removeItem('meetdesk_user');
+          sessionStorage.removeItem('meetdesk_user');
+          window.location.href = 'login.html';
+        },
+        async loadMeetings() {
+          // ===== FETCH MEETINGS FOR CURRENT USER =====
+          if (!this.currentUser || !this.currentUser.email) {
+            this.meetings = [];
+            return;
+          }
+
+          try {
+            // Build query parameters based on search/filters
+            const params = new URLSearchParams();
+            params.append('email', this.currentUser.email);
+            
+            if (this.searchTerm) {
+              params.append('search', this.searchTerm);
+            }
+            if (this.filterFromDate) {
+              params.append('from_date', this.filterFromDate);
+            }
+            if (this.filterToDate) {
+              params.append('to_date', this.filterToDate);
+            }
+            
+            const res = await fetch(`api/meetings/get.php?${params.toString()}`);
+            const data = await res.json();
+            
+            if (data.success && Array.isArray(data.meetings)) {
+              this.meetings = data.meetings;
+            } else {
+              this.meetings = [];
+            }
+          } catch (err) {
+            console.error('Failed to load meetings:', err);
+            this.meetings = [];
+          }
+        },
+        performSearch() {
+          // ===== PERFORM SEARCH/FILTER =====
+          this.loadMeetings();
+        },
+        clearSearch() {
+          // ===== CLEAR SEARCH AND FILTERS =====
+          this.searchTerm = '';
+          this.filterFromDate = '';
+          this.filterToDate = '';
+          this.loadMeetings();
+        },
+        showMeetingMenu(meetingId) {
+          this.activeMeetingMenu = this.activeMeetingMenu === meetingId ? null : meetingId;
+        },
+        showMeetingDetails(meeting) {
+          this.selectedMeeting = meeting;
+          this.showMeetingDetailsModal = true;
+          this.activeMeetingMenu = null;
+        },
+        editMeeting(meeting) {
+          this.editingMeeting = meeting;
+          this.editForm.topic = meeting.topic;
+          this.editForm.description = meeting.description || '';
+          this.editForm.date = meeting.date;
+          this.editForm.time = meeting.time;
+          this.editForm.duration = meeting.duration;
+          this.editErrorMessage = '';
+          this.editSuccessMessage = '';
+          console.log('Editing meeting:', {
+            originalDate: meeting.date,
+            originalTime: meeting.time,
+            topic: meeting.topic
+          });
+          this.showEditModal = true;
+          this.activeMeetingMenu = null;
+        },
+        shareMeetingLink(meeting) {
+          const meetingDate = new Date(meeting.date);
+          const formattedDate = meetingDate.toLocaleDateString('en-US', { 
+            weekday: 'long',
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          });
+          
+          const shareMessage = `📅 Meeting Invitation
+
+Topic: ${meeting.topic}
+
+Description: ${meeting.description || 'No description provided'}
+
+Date: ${formattedDate}
+Time: ${meeting.time}
+
+Meeting ID: ${meeting.meetingId}
+Password: ${meeting.password}
+
+Join Link: ${window.location.origin}/join.html?id=${meeting.meetingId}`;
+
+          const joinLink = `${window.location.origin}/join.html?id=${meeting.meetingId}`;
+          
+          // Show share options modal
+          this.shareModalInfo = {
+            meeting: meeting,
+            message: shareMessage,
+            joinLink: joinLink
+          };
+          this.showShareModal = true;
+          this.activeMeetingMenu = null;
+        },
+        shareToWhatsApp() {
+          if (!this.shareModalInfo) return;
+          const encodedMessage = encodeURIComponent(this.shareModalInfo.message);
+          window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
+        },
+        shareToEmail() {
+          if (!this.shareModalInfo) return;
+          // Show email input form instead
+          this.showEmailForm = true;
+          this.emailRecipient = '';
+          this.emailSending = false;
+          this.emailMessage = '';
+        },
+        async sendMeetingEmail() {
+          if (!this.emailRecipient.trim()) {
+            this.emailMessage = 'Please enter an email address';
+            return;
+          }
+          
+          if (!this.emailRecipient.includes('@')) {
+            this.emailMessage = 'Please enter a valid email address';
+            return;
+          }
+          
+          this.emailSending = true;
+          this.emailMessage = '';
+          
+          try {
+            const res = await fetch('api/meetings/send-meeting-email.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email: this.currentUser.email,
+                meetingId: this.shareModalInfo.meeting.meetingId,
+                recipientEmail: this.emailRecipient
+              })
+            });
+            
+            const data = await res.json();
+            
+            if (data.success) {
+              this.emailMessage = `Email sent to ${this.emailRecipient}!`;
+              setTimeout(() => {
+                this.showEmailForm = false;
+                this.showShareModal = false;
+              }, 1500);
+            } else {
+              this.emailMessage = data.message || 'Failed to send email';
+            }
+          } catch (err) {
+            this.emailMessage = 'Error: ' + err.message;
+          } finally {
+            this.emailSending = false;
+          }
+        },
+        copyToClipboard() {
+          if (!this.shareModalInfo) return;
+          navigator.clipboard.writeText(this.shareModalInfo.message).then(() => {
+            alert('Meeting details copied to clipboard!');
+            this.showShareModal = false;
+          }).catch(() => {
+            alert('Failed to copy');
+          });
+        },
+        async updateMeeting() {
+          this.editErrorMessage = '';
+          this.editSuccessMessage = '';
+
+          if (!this.editForm.topic.trim()) {
+            this.editErrorMessage = 'Topic is required';
+            return;
+          }
+
+          if (!this.editForm.date || !this.editForm.time) {
+            this.editErrorMessage = 'Date and time are required';
+            return;
+          }
+
+          try {
+            const payload = {
+              email: this.currentUser.email,
+              originalDate: this.editingMeeting.date,
+              originalTime: this.editingMeeting.time,
+              topic: this.editForm.topic,
+              description: this.editForm.description,
+              date: this.editForm.date,
+              time: this.editForm.time,
+              duration: this.editForm.duration
+            };
+            
+            console.log('Sending update request:', payload);
+            
+            const res = await fetch('api/meetings/update.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+              this.editSuccessMessage = 'Meeting updated successfully!';
+              setTimeout(() => {
+                this.showEditModal = false;
+                this.loadMeetings(); // Reload meetings to show updates
+              }, 1500);
+            } else {
+              this.editErrorMessage = data.message || 'Failed to update meeting';
+            }
+          } catch (err) {
+            this.editErrorMessage = 'Error: ' + err.message;
+          }
+        },
+        formatTime(time) {
+          // Format time from HH:MM to readable format
+          const [h, m] = time.split(':');
+          const hour = parseInt(h);
+          const ampm = hour >= 12 ? 'PM' : 'AM';
+          const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
+          return `${displayHour}:${m} ${ampm}`;
+        },
+        calculateEndTime(startTime, durationMinutes) {
+          // Calculate end time based on start time and duration
+          const [h, m] = startTime.split(':');
+          let hour = parseInt(h);
+          let minute = parseInt(m) + durationMinutes;
+          
+          if (minute >= 60) {
+            hour += Math.floor(minute / 60);
+            minute = minute % 60;
+          }
+          
+          const ampm = hour >= 12 ? 'PM' : 'AM';
+          const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
+          return `${displayHour}:${String(minute).padStart(2, '0')} ${ampm}`;
+        },
+        async deleteMeeting(meetingId) {
+          this.showDeleteConfirm = true;
+          this.deleteConfirmId = meetingId;
+          this.activeMeetingMenu = null;
+        },
+        async confirmDelete() {
+          if (!this.deleteConfirmId || !this.currentUser) return;
+
+          try {
+            const res = await fetch('api/meetings/delete.php', {
+              method: 'DELETE',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                meetingId: this.deleteConfirmId,
+                userEmail: this.currentUser.email
+              })
+            });
+
+            const data = await res.json();
+            if (data.success) {
+              await this.loadMeetings();
+            }
+          } catch (err) {
+            console.error('Failed to delete meeting:', err);
+          }
+          
+          this.showDeleteConfirm = false;
+          this.deleteConfirmId = null;
+        },
+        startMeeting(meeting) {
+          // Navigate to join page with meeting ID pre-filled
+          window.location.href = `join.html?id=${meeting.meetingId}`;
+        },
+        getDateLabel(meetingDate, today) {
+          // ===== GET DATE LABEL (Today, Tomorrow, or specific date) =====
+          const diffTime = meetingDate.getTime() - today.getTime();
+          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          
+          if (diffDays === 0) {
+            return 'Today';
+          } else if (diffDays === 1) {
+            return 'Tomorrow';
+          } else {
+            // Return date in format like "Dec 28, 2025"
+            return meetingDate.toLocaleDateString('en-US', { 
+              month: 'short', 
+              day: 'numeric', 
+              year: 'numeric' 
+            });
+          }
+        },
+        generateMeetingId(mongoId) {
+          // ===== GENERATE A READABLE MEETING ID FROM MONGODB ID =====
+          // Format: XXX XXX XXXX (first 11 chars of mongo ID in groups)
+          const idStr = mongoId.substring(0, 11);
+          return `${idStr.substring(0, 3)} ${idStr.substring(3, 6)} ${idStr.substring(6, 11)}`;
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

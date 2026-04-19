@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API URL Test</title>
+  <script src="js/api.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+    .success { color: green; font-weight: bold; }
+    .error { color: red; font-weight: bold; }
+    .info { background: #e3f2fd; padding: 15px; border-left: 4px solid #2196F3; margin: 20px 0; }
+    pre { background: #f5f5f5; padding: 10px; border-radius: 4px; }
+    button { background: #4285F4; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 5px; }
+    button:hover { background: #3367D6; }
+  </style>
+</head>
+<body>
+  <h1>API URL Configuration Test</h1>
+  
+  <div class="info">
+    <strong>Current API_URL:</strong>
+    <pre id="api-url"></pre>
+  </div>
+
+  <h2>Test Registration Endpoint</h2>
+  <button onclick="testRegistration()">Test Registration API</button>
+  <div id="result"></div>
+
+  <script>
+    // Display API_URL
+    document.getElementById('api-url').textContent = API_URL;
+
+    async function testRegistration() {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '<p>Testing...</p>';
+
+      try {
+        const url = `${API_URL}/auth/register.php`;
+        console.log('Testing URL:', url);
+
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'API Test User',
+            email: 'apitest' + Date.now() + '@test.com',
+            password: 'test123456'
+          })
+        });
+
+        const data = await response.json();
+        
+        if (response.ok) {
+          resultDiv.innerHTML = `
+            <p class="success">✓ SUCCESS! API is working correctly</p>
+            <pre>${JSON.stringify(data, null, 2)}</pre>
+          `;
+        } else {
+          resultDiv.innerHTML = `
+            <p class="error">✗ API returned error (but connection works!)</p>
+            <pre>${JSON.stringify(data, null, 2)}</pre>
+          `;
+        }
+      } catch (error) {
+        resultDiv.innerHTML = `
+          <p class="error">✗ FAILED: Could not connect to API</p>
+          <p>Error: ${error.message}</p>
+          <p><strong>This means the API_URL is incorrect or server is not running</strong></p>
+        `;
+        console.error('API Test Error:', error);
+      }
+    }
+  </script>
+
+  <hr>
+  <h2>Troubleshooting Steps</h2>
+  <ol>
+    <li>Check that API_URL above shows: <code>http://localhost/MD/api</code></li>
+    <li>Click "Test Registration API" button</li>
+    <li>If it works here but not on register.html, clear browser cache:
+      <ul>
+        <li>Press <kbd>Ctrl + Shift + Delete</kbd></li>
+        <li>Select "Cached images and files"</li>
+        <li>Click "Clear data"</li>
+      </ul>
+    </li>
+    <li>Or do a hard refresh on register.html: <kbd>Ctrl + F5</kbd></li>
+  </ol>
+</body>
+</html>
