@@ -1,0 +1,3150 @@
+[2026-04-14 00:00:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:00:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:00:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:00:00] [DEBUG] Current Time: 00:00
+[2026-04-14 00:00:00] [DEBUG] Looking for meetings between 00:00 and 00:30
+[2026-04-14 00:00:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:00:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:00:00] [INFO] No reminders to send
+[2026-04-14 00:00:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:00:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:01:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:01:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:01:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:01:00] [DEBUG] Current Time: 00:01
+[2026-04-14 00:01:00] [DEBUG] Looking for meetings between 00:01 and 00:31
+[2026-04-14 00:01:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:01:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:01:00] [INFO] No reminders to send
+[2026-04-14 00:01:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:01:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:02:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:02:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:02:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:02:00] [DEBUG] Current Time: 00:02
+[2026-04-14 00:02:00] [DEBUG] Looking for meetings between 00:02 and 00:32
+[2026-04-14 00:02:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:02:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:02:00] [INFO] No reminders to send
+[2026-04-14 00:02:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:02:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:03:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:03:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:03:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:03:00] [DEBUG] Current Time: 00:03
+[2026-04-14 00:03:00] [DEBUG] Looking for meetings between 00:03 and 00:33
+[2026-04-14 00:03:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:03:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:03:00] [INFO] No reminders to send
+[2026-04-14 00:03:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:03:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:04:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:04:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:04:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:04:00] [DEBUG] Current Time: 00:04
+[2026-04-14 00:04:00] [DEBUG] Looking for meetings between 00:04 and 00:34
+[2026-04-14 00:04:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:04:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:04:00] [INFO] No reminders to send
+[2026-04-14 00:04:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:04:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:05:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:05:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:05:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:05:00] [DEBUG] Current Time: 00:05
+[2026-04-14 00:05:00] [DEBUG] Looking for meetings between 00:05 and 00:35
+[2026-04-14 00:05:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:05:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:05:00] [INFO] No reminders to send
+[2026-04-14 00:05:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:05:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:06:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:06:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:06:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:06:00] [DEBUG] Current Time: 00:06
+[2026-04-14 00:06:00] [DEBUG] Looking for meetings between 00:06 and 00:36
+[2026-04-14 00:06:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:06:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:06:00] [INFO] No reminders to send
+[2026-04-14 00:06:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:06:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:07:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:07:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:07:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:07:00] [DEBUG] Current Time: 00:07
+[2026-04-14 00:07:00] [DEBUG] Looking for meetings between 00:07 and 00:37
+[2026-04-14 00:07:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:07:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:07:00] [INFO] No reminders to send
+[2026-04-14 00:07:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:07:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:08:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:08:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:08:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:08:00] [DEBUG] Current Time: 00:08
+[2026-04-14 00:08:00] [DEBUG] Looking for meetings between 00:08 and 00:38
+[2026-04-14 00:08:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:08:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:08:00] [INFO] No reminders to send
+[2026-04-14 00:08:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:08:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:09:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:09:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:09:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:09:00] [DEBUG] Current Time: 00:09
+[2026-04-14 00:09:00] [DEBUG] Looking for meetings between 00:09 and 00:39
+[2026-04-14 00:09:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:09:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:09:00] [INFO] No reminders to send
+[2026-04-14 00:09:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:09:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:10:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:10:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:10:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:10:00] [DEBUG] Current Time: 00:10
+[2026-04-14 00:10:00] [DEBUG] Looking for meetings between 00:10 and 00:40
+[2026-04-14 00:10:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:10:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:10:00] [INFO] No reminders to send
+[2026-04-14 00:10:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:10:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:11:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:11:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:11:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:11:00] [DEBUG] Current Time: 00:11
+[2026-04-14 00:11:00] [DEBUG] Looking for meetings between 00:11 and 00:41
+[2026-04-14 00:11:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:11:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:11:00] [INFO] No reminders to send
+[2026-04-14 00:11:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:11:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:12:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:12:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:12:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:12:00] [DEBUG] Current Time: 00:12
+[2026-04-14 00:12:00] [DEBUG] Looking for meetings between 00:12 and 00:42
+[2026-04-14 00:12:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:12:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:12:00] [INFO] No reminders to send
+[2026-04-14 00:12:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:12:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:13:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:13:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:13:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:13:00] [DEBUG] Current Time: 00:13
+[2026-04-14 00:13:00] [DEBUG] Looking for meetings between 00:13 and 00:43
+[2026-04-14 00:13:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:13:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:13:00] [INFO] No reminders to send
+[2026-04-14 00:13:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:13:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:14:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:14:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:14:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:14:00] [DEBUG] Current Time: 00:14
+[2026-04-14 00:14:00] [DEBUG] Looking for meetings between 00:14 and 00:44
+[2026-04-14 00:14:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:14:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:14:00] [INFO] No reminders to send
+[2026-04-14 00:14:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:14:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:15:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:15:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:15:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:15:00] [DEBUG] Current Time: 00:15
+[2026-04-14 00:15:00] [DEBUG] Looking for meetings between 00:15 and 00:45
+[2026-04-14 00:15:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:15:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:15:00] [INFO] No reminders to send
+[2026-04-14 00:15:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:15:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:16:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:16:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:16:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:16:00] [DEBUG] Current Time: 00:16
+[2026-04-14 00:16:00] [DEBUG] Looking for meetings between 00:16 and 00:46
+[2026-04-14 00:16:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:16:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:16:00] [INFO] No reminders to send
+[2026-04-14 00:16:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:16:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:17:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:17:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:17:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:17:00] [DEBUG] Current Time: 00:17
+[2026-04-14 00:17:00] [DEBUG] Looking for meetings between 00:17 and 00:47
+[2026-04-14 00:17:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:17:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:17:00] [INFO] No reminders to send
+[2026-04-14 00:17:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:17:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:18:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:18:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:18:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:18:00] [DEBUG] Current Time: 00:18
+[2026-04-14 00:18:00] [DEBUG] Looking for meetings between 00:18 and 00:48
+[2026-04-14 00:18:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:18:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:18:00] [INFO] No reminders to send
+[2026-04-14 00:18:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:18:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:19:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:19:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:19:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:19:00] [DEBUG] Current Time: 00:19
+[2026-04-14 00:19:00] [DEBUG] Looking for meetings between 00:19 and 00:49
+[2026-04-14 00:19:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:19:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:19:00] [INFO] No reminders to send
+[2026-04-14 00:19:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:19:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:20:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:20:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:20:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:20:00] [DEBUG] Current Time: 00:20
+[2026-04-14 00:20:00] [DEBUG] Looking for meetings between 00:20 and 00:50
+[2026-04-14 00:20:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:20:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:20:00] [INFO] No reminders to send
+[2026-04-14 00:20:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:20:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:21:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:21:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:21:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:21:00] [DEBUG] Current Time: 00:21
+[2026-04-14 00:21:00] [DEBUG] Looking for meetings between 00:21 and 00:51
+[2026-04-14 00:21:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:21:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:21:00] [INFO] No reminders to send
+[2026-04-14 00:21:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:21:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:22:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:22:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:22:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:22:00] [DEBUG] Current Time: 00:22
+[2026-04-14 00:22:00] [DEBUG] Looking for meetings between 00:22 and 00:52
+[2026-04-14 00:22:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:22:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:22:00] [INFO] No reminders to send
+[2026-04-14 00:22:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:22:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:23:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:23:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:23:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:23:00] [DEBUG] Current Time: 00:23
+[2026-04-14 00:23:00] [DEBUG] Looking for meetings between 00:23 and 00:53
+[2026-04-14 00:23:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:23:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:23:00] [INFO] No reminders to send
+[2026-04-14 00:23:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:23:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:24:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:24:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:24:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:24:00] [DEBUG] Current Time: 00:24
+[2026-04-14 00:24:00] [DEBUG] Looking for meetings between 00:24 and 00:54
+[2026-04-14 00:24:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:24:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:24:00] [INFO] No reminders to send
+[2026-04-14 00:24:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:24:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:25:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:25:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:25:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:25:00] [DEBUG] Current Time: 00:25
+[2026-04-14 00:25:00] [DEBUG] Looking for meetings between 00:25 and 00:55
+[2026-04-14 00:25:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:25:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:25:00] [INFO] No reminders to send
+[2026-04-14 00:25:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:25:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:26:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:26:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:26:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:26:00] [DEBUG] Current Time: 00:26
+[2026-04-14 00:26:00] [DEBUG] Looking for meetings between 00:26 and 00:56
+[2026-04-14 00:26:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:26:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:26:00] [INFO] No reminders to send
+[2026-04-14 00:26:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:26:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:27:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:27:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:27:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:27:00] [DEBUG] Current Time: 00:27
+[2026-04-14 00:27:00] [DEBUG] Looking for meetings between 00:27 and 00:57
+[2026-04-14 00:27:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:27:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:27:00] [INFO] No reminders to send
+[2026-04-14 00:27:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:27:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:28:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:28:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:28:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:28:00] [DEBUG] Current Time: 00:28
+[2026-04-14 00:28:00] [DEBUG] Looking for meetings between 00:28 and 00:58
+[2026-04-14 00:28:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:28:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:28:00] [INFO] No reminders to send
+[2026-04-14 00:28:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:28:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:29:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:29:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:29:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:29:00] [DEBUG] Current Time: 00:29
+[2026-04-14 00:29:00] [DEBUG] Looking for meetings between 00:29 and 00:59
+[2026-04-14 00:29:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:29:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:29:00] [INFO] No reminders to send
+[2026-04-14 00:29:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:29:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:30:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:30:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:30:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:30:00] [DEBUG] Current Time: 00:30
+[2026-04-14 00:30:00] [DEBUG] Looking for meetings between 00:30 and 01:00
+[2026-04-14 00:30:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:30:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:30:00] [INFO] No reminders to send
+[2026-04-14 00:30:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:30:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:31:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:31:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:31:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:31:00] [DEBUG] Current Time: 00:31
+[2026-04-14 00:31:00] [DEBUG] Looking for meetings between 00:31 and 01:01
+[2026-04-14 00:31:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:31:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:31:00] [INFO] No reminders to send
+[2026-04-14 00:31:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:31:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:32:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:32:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:32:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:32:00] [DEBUG] Current Time: 00:32
+[2026-04-14 00:32:00] [DEBUG] Looking for meetings between 00:32 and 01:02
+[2026-04-14 00:32:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:32:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:32:00] [INFO] No reminders to send
+[2026-04-14 00:32:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:32:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:33:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:33:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:33:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:33:00] [DEBUG] Current Time: 00:33
+[2026-04-14 00:33:00] [DEBUG] Looking for meetings between 00:33 and 01:03
+[2026-04-14 00:33:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:33:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:33:00] [INFO] No reminders to send
+[2026-04-14 00:33:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:33:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:34:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:34:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:34:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:34:00] [DEBUG] Current Time: 00:34
+[2026-04-14 00:34:00] [DEBUG] Looking for meetings between 00:34 and 01:04
+[2026-04-14 00:34:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:34:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:34:00] [INFO] No reminders to send
+[2026-04-14 00:34:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:34:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:35:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:35:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:35:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:35:00] [DEBUG] Current Time: 00:35
+[2026-04-14 00:35:00] [DEBUG] Looking for meetings between 00:35 and 01:05
+[2026-04-14 00:35:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:35:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:35:00] [INFO] No reminders to send
+[2026-04-14 00:35:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:35:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:36:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:36:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:36:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:36:00] [DEBUG] Current Time: 00:36
+[2026-04-14 00:36:00] [DEBUG] Looking for meetings between 00:36 and 01:06
+[2026-04-14 00:36:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:36:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:36:00] [INFO] No reminders to send
+[2026-04-14 00:36:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:36:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:37:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:37:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:37:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:37:00] [DEBUG] Current Time: 00:37
+[2026-04-14 00:37:00] [DEBUG] Looking for meetings between 00:37 and 01:07
+[2026-04-14 00:37:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:37:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:37:00] [INFO] No reminders to send
+[2026-04-14 00:37:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:37:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:38:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:38:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:38:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:38:00] [DEBUG] Current Time: 00:38
+[2026-04-14 00:38:00] [DEBUG] Looking for meetings between 00:38 and 01:08
+[2026-04-14 00:38:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:38:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:38:00] [INFO] No reminders to send
+[2026-04-14 00:38:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:38:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:39:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:39:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:39:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:39:00] [DEBUG] Current Time: 00:39
+[2026-04-14 00:39:00] [DEBUG] Looking for meetings between 00:39 and 01:09
+[2026-04-14 00:39:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:39:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:39:00] [INFO] No reminders to send
+[2026-04-14 00:39:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:39:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:40:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:40:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:40:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:40:00] [DEBUG] Current Time: 00:40
+[2026-04-14 00:40:00] [DEBUG] Looking for meetings between 00:40 and 01:10
+[2026-04-14 00:40:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:40:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:40:00] [INFO] No reminders to send
+[2026-04-14 00:40:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:40:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:41:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:41:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:41:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:41:00] [DEBUG] Current Time: 00:41
+[2026-04-14 00:41:00] [DEBUG] Looking for meetings between 00:41 and 01:11
+[2026-04-14 00:41:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:41:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:41:00] [INFO] No reminders to send
+[2026-04-14 00:41:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:41:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:42:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:42:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:42:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:42:00] [DEBUG] Current Time: 00:42
+[2026-04-14 00:42:00] [DEBUG] Looking for meetings between 00:42 and 01:12
+[2026-04-14 00:42:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:42:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:42:00] [INFO] No reminders to send
+[2026-04-14 00:42:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:42:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:43:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:43:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:43:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:43:00] [DEBUG] Current Time: 00:43
+[2026-04-14 00:43:00] [DEBUG] Looking for meetings between 00:43 and 01:13
+[2026-04-14 00:43:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:43:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:43:00] [INFO] No reminders to send
+[2026-04-14 00:43:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:43:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:44:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:44:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:44:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:44:00] [DEBUG] Current Time: 00:44
+[2026-04-14 00:44:00] [DEBUG] Looking for meetings between 00:44 and 01:14
+[2026-04-14 00:44:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:44:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:44:00] [INFO] No reminders to send
+[2026-04-14 00:44:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:44:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:45:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:45:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:45:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:45:00] [DEBUG] Current Time: 00:45
+[2026-04-14 00:45:00] [DEBUG] Looking for meetings between 00:45 and 01:15
+[2026-04-14 00:45:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:45:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:45:00] [INFO] No reminders to send
+[2026-04-14 00:45:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:45:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:46:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:46:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:46:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:46:00] [DEBUG] Current Time: 00:46
+[2026-04-14 00:46:00] [DEBUG] Looking for meetings between 00:46 and 01:16
+[2026-04-14 00:46:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:46:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:46:00] [INFO] No reminders to send
+[2026-04-14 00:46:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:46:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:47:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:47:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:47:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:47:00] [DEBUG] Current Time: 00:47
+[2026-04-14 00:47:00] [DEBUG] Looking for meetings between 00:47 and 01:17
+[2026-04-14 00:47:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:47:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:47:00] [INFO] No reminders to send
+[2026-04-14 00:47:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:47:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:48:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:48:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:48:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:48:00] [DEBUG] Current Time: 00:48
+[2026-04-14 00:48:00] [DEBUG] Looking for meetings between 00:48 and 01:18
+[2026-04-14 00:48:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:48:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:48:00] [INFO] No reminders to send
+[2026-04-14 00:48:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:48:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:49:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:49:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:49:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:49:00] [DEBUG] Current Time: 00:49
+[2026-04-14 00:49:00] [DEBUG] Looking for meetings between 00:49 and 01:19
+[2026-04-14 00:49:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:49:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:49:00] [INFO] No reminders to send
+[2026-04-14 00:49:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:49:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:50:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:50:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:50:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:50:00] [DEBUG] Current Time: 00:50
+[2026-04-14 00:50:00] [DEBUG] Looking for meetings between 00:50 and 01:20
+[2026-04-14 00:50:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:50:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:50:00] [INFO] No reminders to send
+[2026-04-14 00:50:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:50:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:51:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:51:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:51:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:51:00] [DEBUG] Current Time: 00:51
+[2026-04-14 00:51:00] [DEBUG] Looking for meetings between 00:51 and 01:21
+[2026-04-14 00:51:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:51:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:51:00] [INFO] No reminders to send
+[2026-04-14 00:51:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:51:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:52:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:52:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:52:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:52:00] [DEBUG] Current Time: 00:52
+[2026-04-14 00:52:00] [DEBUG] Looking for meetings between 00:52 and 01:22
+[2026-04-14 00:52:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:52:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:52:00] [INFO] No reminders to send
+[2026-04-14 00:52:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:52:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:53:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:53:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:53:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:53:00] [DEBUG] Current Time: 00:53
+[2026-04-14 00:53:00] [DEBUG] Looking for meetings between 00:53 and 01:23
+[2026-04-14 00:53:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:53:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:53:00] [INFO] No reminders to send
+[2026-04-14 00:53:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:53:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:54:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:54:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:54:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:54:00] [DEBUG] Current Time: 00:54
+[2026-04-14 00:54:00] [DEBUG] Looking for meetings between 00:54 and 01:24
+[2026-04-14 00:54:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:54:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:54:00] [INFO] No reminders to send
+[2026-04-14 00:54:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:54:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:55:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:55:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:55:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:55:00] [DEBUG] Current Time: 00:55
+[2026-04-14 00:55:00] [DEBUG] Looking for meetings between 00:55 and 01:25
+[2026-04-14 00:55:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:55:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:55:00] [INFO] No reminders to send
+[2026-04-14 00:55:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:55:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:56:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:56:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:56:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:56:00] [DEBUG] Current Time: 00:56
+[2026-04-14 00:56:00] [DEBUG] Looking for meetings between 00:56 and 01:26
+[2026-04-14 00:56:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:56:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:56:00] [INFO] No reminders to send
+[2026-04-14 00:56:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:56:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:57:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:57:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:57:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:57:00] [DEBUG] Current Time: 00:57
+[2026-04-14 00:57:00] [DEBUG] Looking for meetings between 00:57 and 01:27
+[2026-04-14 00:57:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:57:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:57:00] [INFO] No reminders to send
+[2026-04-14 00:57:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:57:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:58:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:58:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:58:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:58:00] [DEBUG] Current Time: 00:58
+[2026-04-14 00:58:00] [DEBUG] Looking for meetings between 00:58 and 01:28
+[2026-04-14 00:58:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:58:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:58:00] [INFO] No reminders to send
+[2026-04-14 00:58:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:58:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 00:59:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 00:59:00] [INFO] Connecting to MongoDB...
+[2026-04-14 00:59:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 00:59:00] [DEBUG] Current Time: 00:59
+[2026-04-14 00:59:00] [DEBUG] Looking for meetings between 00:59 and 01:29
+[2026-04-14 00:59:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 00:59:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 00:59:00] [INFO] No reminders to send
+[2026-04-14 00:59:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 00:59:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:00:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:00:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:00:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:00:00] [DEBUG] Current Time: 01:00
+[2026-04-14 01:00:00] [DEBUG] Looking for meetings between 01:00 and 01:30
+[2026-04-14 01:00:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:00:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:00:00] [INFO] No reminders to send
+[2026-04-14 01:00:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:00:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:01:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:01:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:01:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:01:00] [DEBUG] Current Time: 01:01
+[2026-04-14 01:01:00] [DEBUG] Looking for meetings between 01:01 and 01:31
+[2026-04-14 01:01:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:01:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:01:00] [INFO] No reminders to send
+[2026-04-14 01:01:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:01:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:02:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:02:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:02:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:02:01] [DEBUG] Current Time: 01:02
+[2026-04-14 01:02:01] [DEBUG] Looking for meetings between 01:02 and 01:32
+[2026-04-14 01:02:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:02:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:02:01] [INFO] No reminders to send
+[2026-04-14 01:02:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:02:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:03:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:03:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:03:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:03:01] [DEBUG] Current Time: 01:03
+[2026-04-14 01:03:01] [DEBUG] Looking for meetings between 01:03 and 01:33
+[2026-04-14 01:03:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:03:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:03:01] [INFO] No reminders to send
+[2026-04-14 01:03:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:03:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:04:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:04:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:04:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:04:01] [DEBUG] Current Time: 01:04
+[2026-04-14 01:04:01] [DEBUG] Looking for meetings between 01:04 and 01:34
+[2026-04-14 01:04:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:04:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:04:01] [INFO] No reminders to send
+[2026-04-14 01:04:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:04:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:05:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:05:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:05:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:05:01] [DEBUG] Current Time: 01:05
+[2026-04-14 01:05:01] [DEBUG] Looking for meetings between 01:05 and 01:35
+[2026-04-14 01:05:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:05:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:05:01] [INFO] No reminders to send
+[2026-04-14 01:05:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:05:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:06:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:06:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:06:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:06:01] [DEBUG] Current Time: 01:06
+[2026-04-14 01:06:01] [DEBUG] Looking for meetings between 01:06 and 01:36
+[2026-04-14 01:06:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:06:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:06:01] [INFO] No reminders to send
+[2026-04-14 01:06:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:06:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:07:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:07:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:07:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:07:01] [DEBUG] Current Time: 01:07
+[2026-04-14 01:07:01] [DEBUG] Looking for meetings between 01:07 and 01:37
+[2026-04-14 01:07:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:07:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:07:01] [INFO] No reminders to send
+[2026-04-14 01:07:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:07:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:08:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:08:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:08:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:08:01] [DEBUG] Current Time: 01:08
+[2026-04-14 01:08:01] [DEBUG] Looking for meetings between 01:08 and 01:38
+[2026-04-14 01:08:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:08:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:08:01] [INFO] No reminders to send
+[2026-04-14 01:08:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:08:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:09:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:09:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:09:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:09:01] [DEBUG] Current Time: 01:09
+[2026-04-14 01:09:01] [DEBUG] Looking for meetings between 01:09 and 01:39
+[2026-04-14 01:09:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:09:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:09:01] [INFO] No reminders to send
+[2026-04-14 01:09:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:09:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:10:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:10:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:10:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:10:01] [DEBUG] Current Time: 01:10
+[2026-04-14 01:10:01] [DEBUG] Looking for meetings between 01:10 and 01:40
+[2026-04-14 01:10:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:10:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:10:01] [INFO] No reminders to send
+[2026-04-14 01:10:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:10:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:11:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:11:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:11:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:11:01] [DEBUG] Current Time: 01:11
+[2026-04-14 01:11:01] [DEBUG] Looking for meetings between 01:11 and 01:41
+[2026-04-14 01:11:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:11:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:11:01] [INFO] No reminders to send
+[2026-04-14 01:11:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:11:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:12:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:12:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:12:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:12:01] [DEBUG] Current Time: 01:12
+[2026-04-14 01:12:01] [DEBUG] Looking for meetings between 01:12 and 01:42
+[2026-04-14 01:12:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:12:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:12:01] [INFO] No reminders to send
+[2026-04-14 01:12:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:12:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:13:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:13:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:13:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:13:01] [DEBUG] Current Time: 01:13
+[2026-04-14 01:13:01] [DEBUG] Looking for meetings between 01:13 and 01:43
+[2026-04-14 01:13:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:13:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:13:01] [INFO] No reminders to send
+[2026-04-14 01:13:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:13:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:14:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:14:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:14:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:14:01] [DEBUG] Current Time: 01:14
+[2026-04-14 01:14:01] [DEBUG] Looking for meetings between 01:14 and 01:44
+[2026-04-14 01:14:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:14:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:14:01] [INFO] No reminders to send
+[2026-04-14 01:14:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:14:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:15:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:15:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:15:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:15:01] [DEBUG] Current Time: 01:15
+[2026-04-14 01:15:01] [DEBUG] Looking for meetings between 01:15 and 01:45
+[2026-04-14 01:15:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:15:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:15:01] [INFO] No reminders to send
+[2026-04-14 01:15:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:15:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:16:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:16:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:16:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:16:01] [DEBUG] Current Time: 01:16
+[2026-04-14 01:16:01] [DEBUG] Looking for meetings between 01:16 and 01:46
+[2026-04-14 01:16:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:16:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:16:01] [INFO] No reminders to send
+[2026-04-14 01:16:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:16:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:17:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:17:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:17:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:17:01] [DEBUG] Current Time: 01:17
+[2026-04-14 01:17:01] [DEBUG] Looking for meetings between 01:17 and 01:47
+[2026-04-14 01:17:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:17:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:17:01] [INFO] No reminders to send
+[2026-04-14 01:17:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:17:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:18:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:18:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:18:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:18:01] [DEBUG] Current Time: 01:18
+[2026-04-14 01:18:01] [DEBUG] Looking for meetings between 01:18 and 01:48
+[2026-04-14 01:18:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:18:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:18:01] [INFO] No reminders to send
+[2026-04-14 01:18:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:18:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:19:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:19:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:19:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:19:01] [DEBUG] Current Time: 01:19
+[2026-04-14 01:19:01] [DEBUG] Looking for meetings between 01:19 and 01:49
+[2026-04-14 01:19:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:19:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:19:01] [INFO] No reminders to send
+[2026-04-14 01:19:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:19:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:20:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:20:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:20:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:20:01] [DEBUG] Current Time: 01:20
+[2026-04-14 01:20:01] [DEBUG] Looking for meetings between 01:20 and 01:50
+[2026-04-14 01:20:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:20:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:20:01] [INFO] No reminders to send
+[2026-04-14 01:20:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:20:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:21:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:21:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:21:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:21:01] [DEBUG] Current Time: 01:21
+[2026-04-14 01:21:01] [DEBUG] Looking for meetings between 01:21 and 01:51
+[2026-04-14 01:21:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:21:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:21:01] [INFO] No reminders to send
+[2026-04-14 01:21:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:21:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:22:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:22:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:22:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:22:01] [DEBUG] Current Time: 01:22
+[2026-04-14 01:22:01] [DEBUG] Looking for meetings between 01:22 and 01:52
+[2026-04-14 01:22:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:22:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:22:01] [INFO] No reminders to send
+[2026-04-14 01:22:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:22:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:23:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:23:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:23:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:23:01] [DEBUG] Current Time: 01:23
+[2026-04-14 01:23:01] [DEBUG] Looking for meetings between 01:23 and 01:53
+[2026-04-14 01:23:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:23:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:23:01] [INFO] No reminders to send
+[2026-04-14 01:23:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:23:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:24:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:24:01] [INFO] Connecting to MongoDB...
+[2026-04-14 01:24:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:24:01] [DEBUG] Current Time: 01:24
+[2026-04-14 01:24:01] [DEBUG] Looking for meetings between 01:24 and 01:54
+[2026-04-14 01:24:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:24:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:24:01] [INFO] No reminders to send
+[2026-04-14 01:24:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:24:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:25:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:25:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:25:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:25:00] [DEBUG] Current Time: 01:25
+[2026-04-14 01:25:00] [DEBUG] Looking for meetings between 01:25 and 01:55
+[2026-04-14 01:25:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:25:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:25:00] [INFO] No reminders to send
+[2026-04-14 01:25:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:25:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:26:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:26:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:26:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:26:00] [DEBUG] Current Time: 01:26
+[2026-04-14 01:26:00] [DEBUG] Looking for meetings between 01:26 and 01:56
+[2026-04-14 01:26:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:26:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:26:00] [INFO] No reminders to send
+[2026-04-14 01:26:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:26:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:27:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:27:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:27:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:27:00] [DEBUG] Current Time: 01:27
+[2026-04-14 01:27:00] [DEBUG] Looking for meetings between 01:27 and 01:57
+[2026-04-14 01:27:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:27:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:27:00] [INFO] No reminders to send
+[2026-04-14 01:27:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:27:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:28:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:28:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:28:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:28:00] [DEBUG] Current Time: 01:28
+[2026-04-14 01:28:00] [DEBUG] Looking for meetings between 01:28 and 01:58
+[2026-04-14 01:28:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:28:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:28:00] [INFO] No reminders to send
+[2026-04-14 01:28:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:28:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:29:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:29:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:29:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:29:00] [DEBUG] Current Time: 01:29
+[2026-04-14 01:29:00] [DEBUG] Looking for meetings between 01:29 and 01:59
+[2026-04-14 01:29:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:29:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:29:00] [INFO] No reminders to send
+[2026-04-14 01:29:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:29:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:30:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:30:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:30:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:30:00] [DEBUG] Current Time: 01:30
+[2026-04-14 01:30:00] [DEBUG] Looking for meetings between 01:30 and 02:00
+[2026-04-14 01:30:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:30:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:30:00] [INFO] No reminders to send
+[2026-04-14 01:30:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:30:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:31:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:31:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:31:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:31:00] [DEBUG] Current Time: 01:31
+[2026-04-14 01:31:00] [DEBUG] Looking for meetings between 01:31 and 02:01
+[2026-04-14 01:31:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:31:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:31:00] [INFO] No reminders to send
+[2026-04-14 01:31:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:31:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:32:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:32:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:32:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:32:00] [DEBUG] Current Time: 01:32
+[2026-04-14 01:32:00] [DEBUG] Looking for meetings between 01:32 and 02:02
+[2026-04-14 01:32:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:32:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:32:00] [INFO] No reminders to send
+[2026-04-14 01:32:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:32:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:33:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:33:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:33:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:33:00] [DEBUG] Current Time: 01:33
+[2026-04-14 01:33:00] [DEBUG] Looking for meetings between 01:33 and 02:03
+[2026-04-14 01:33:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:33:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:33:00] [INFO] No reminders to send
+[2026-04-14 01:33:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:33:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:34:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:34:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:34:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:34:00] [DEBUG] Current Time: 01:34
+[2026-04-14 01:34:00] [DEBUG] Looking for meetings between 01:34 and 02:04
+[2026-04-14 01:34:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:34:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:34:00] [INFO] No reminders to send
+[2026-04-14 01:34:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:34:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:35:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:35:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:35:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:35:00] [DEBUG] Current Time: 01:35
+[2026-04-14 01:35:00] [DEBUG] Looking for meetings between 01:35 and 02:05
+[2026-04-14 01:35:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:35:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:35:00] [INFO] No reminders to send
+[2026-04-14 01:35:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:35:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:36:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:36:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:36:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:36:00] [DEBUG] Current Time: 01:36
+[2026-04-14 01:36:00] [DEBUG] Looking for meetings between 01:36 and 02:06
+[2026-04-14 01:36:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:36:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:36:00] [INFO] No reminders to send
+[2026-04-14 01:36:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:36:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:37:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:37:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:37:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:37:00] [DEBUG] Current Time: 01:37
+[2026-04-14 01:37:00] [DEBUG] Looking for meetings between 01:37 and 02:07
+[2026-04-14 01:37:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:37:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:37:00] [INFO] No reminders to send
+[2026-04-14 01:37:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:37:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:38:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:38:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:38:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:38:00] [DEBUG] Current Time: 01:38
+[2026-04-14 01:38:00] [DEBUG] Looking for meetings between 01:38 and 02:08
+[2026-04-14 01:38:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:38:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:38:00] [INFO] No reminders to send
+[2026-04-14 01:38:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:38:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:39:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:39:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:39:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:39:00] [DEBUG] Current Time: 01:39
+[2026-04-14 01:39:00] [DEBUG] Looking for meetings between 01:39 and 02:09
+[2026-04-14 01:39:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:39:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:39:00] [INFO] No reminders to send
+[2026-04-14 01:39:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:39:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:40:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:40:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:40:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:40:00] [DEBUG] Current Time: 01:40
+[2026-04-14 01:40:00] [DEBUG] Looking for meetings between 01:40 and 02:10
+[2026-04-14 01:40:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:40:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:40:00] [INFO] No reminders to send
+[2026-04-14 01:40:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:40:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:41:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:41:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:41:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:41:00] [DEBUG] Current Time: 01:41
+[2026-04-14 01:41:00] [DEBUG] Looking for meetings between 01:41 and 02:11
+[2026-04-14 01:41:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:41:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:41:00] [INFO] No reminders to send
+[2026-04-14 01:41:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:41:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:42:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:42:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:42:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:42:00] [DEBUG] Current Time: 01:42
+[2026-04-14 01:42:00] [DEBUG] Looking for meetings between 01:42 and 02:12
+[2026-04-14 01:42:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:42:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:42:00] [INFO] No reminders to send
+[2026-04-14 01:42:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:42:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:43:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:43:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:43:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:43:00] [DEBUG] Current Time: 01:43
+[2026-04-14 01:43:00] [DEBUG] Looking for meetings between 01:43 and 02:13
+[2026-04-14 01:43:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:43:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:43:00] [INFO] No reminders to send
+[2026-04-14 01:43:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:43:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:44:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:44:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:44:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:44:00] [DEBUG] Current Time: 01:44
+[2026-04-14 01:44:00] [DEBUG] Looking for meetings between 01:44 and 02:14
+[2026-04-14 01:44:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:44:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:44:00] [INFO] No reminders to send
+[2026-04-14 01:44:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:44:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 01:45:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 01:45:00] [INFO] Connecting to MongoDB...
+[2026-04-14 01:45:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 01:45:00] [DEBUG] Current Time: 01:45
+[2026-04-14 01:45:00] [DEBUG] Looking for meetings between 01:45 and 02:15
+[2026-04-14 01:45:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 01:45:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 01:45:00] [INFO] No reminders to send
+[2026-04-14 01:45:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 01:45:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:09:53] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:09:53] [INFO] Connecting to MongoDB...
+[2026-04-14 22:09:53] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:09:53] [DEBUG] Current Time: 22:09
+[2026-04-14 22:09:53] [DEBUG] Looking for meetings between 22:09 and 22:39
+[2026-04-14 22:09:54] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:09:54] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:09:54] [INFO] No reminders to send
+[2026-04-14 22:09:54] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:09:54
+Duration: 0.3s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:10:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:10:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:10:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:10:01] [DEBUG] Current Time: 22:10
+[2026-04-14 22:10:01] [DEBUG] Looking for meetings between 22:10 and 22:40
+[2026-04-14 22:10:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:10:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:10:01] [INFO] No reminders to send
+[2026-04-14 22:10:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:10:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:11:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:11:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:11:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:11:01] [DEBUG] Current Time: 22:11
+[2026-04-14 22:11:01] [DEBUG] Looking for meetings between 22:11 and 22:41
+[2026-04-14 22:11:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:11:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:11:01] [INFO] No reminders to send
+[2026-04-14 22:11:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:11:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:12:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:12:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:12:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:12:01] [DEBUG] Current Time: 22:12
+[2026-04-14 22:12:01] [DEBUG] Looking for meetings between 22:12 and 22:42
+[2026-04-14 22:12:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:12:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:12:01] [INFO] No reminders to send
+[2026-04-14 22:12:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:12:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:13:02] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:13:02] [INFO] Connecting to MongoDB...
+[2026-04-14 22:13:02] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:13:02] [DEBUG] Current Time: 22:13
+[2026-04-14 22:13:02] [DEBUG] Looking for meetings between 22:13 and 22:43
+[2026-04-14 22:13:02] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:13:02] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:13:02] [INFO] No reminders to send
+[2026-04-14 22:13:02] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:13:02
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:14:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:14:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:14:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:14:01] [DEBUG] Current Time: 22:14
+[2026-04-14 22:14:01] [DEBUG] Looking for meetings between 22:14 and 22:44
+[2026-04-14 22:14:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:14:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:14:01] [INFO] No reminders to send
+[2026-04-14 22:14:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:14:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:15:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:15:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:15:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:15:01] [DEBUG] Current Time: 22:15
+[2026-04-14 22:15:01] [DEBUG] Looking for meetings between 22:15 and 22:45
+[2026-04-14 22:15:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:15:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:15:01] [INFO] No reminders to send
+[2026-04-14 22:15:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:15:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:16:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:16:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:16:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:16:01] [DEBUG] Current Time: 22:16
+[2026-04-14 22:16:01] [DEBUG] Looking for meetings between 22:16 and 22:46
+[2026-04-14 22:16:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:16:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:16:01] [INFO] No reminders to send
+[2026-04-14 22:16:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:16:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:17:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:17:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:17:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:17:01] [DEBUG] Current Time: 22:17
+[2026-04-14 22:17:01] [DEBUG] Looking for meetings between 22:17 and 22:47
+[2026-04-14 22:17:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:17:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:17:01] [INFO] No reminders to send
+[2026-04-14 22:17:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:17:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:18:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:18:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:18:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:18:01] [DEBUG] Current Time: 22:18
+[2026-04-14 22:18:01] [DEBUG] Looking for meetings between 22:18 and 22:48
+[2026-04-14 22:18:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:18:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:18:01] [INFO] No reminders to send
+[2026-04-14 22:18:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:18:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:19:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:19:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:19:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:19:01] [DEBUG] Current Time: 22:19
+[2026-04-14 22:19:01] [DEBUG] Looking for meetings between 22:19 and 22:49
+[2026-04-14 22:19:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:19:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:19:01] [INFO] No reminders to send
+[2026-04-14 22:19:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:19:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:20:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:20:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:20:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:20:01] [DEBUG] Current Time: 22:20
+[2026-04-14 22:20:01] [DEBUG] Looking for meetings between 22:20 and 22:50
+[2026-04-14 22:20:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:20:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:20:01] [INFO] No reminders to send
+[2026-04-14 22:20:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:20:01
+Duration: 0.26s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:21:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:21:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:21:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:21:01] [DEBUG] Current Time: 22:21
+[2026-04-14 22:21:01] [DEBUG] Looking for meetings between 22:21 and 22:51
+[2026-04-14 22:21:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:21:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:21:01] [INFO] No reminders to send
+[2026-04-14 22:21:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:21:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:22:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:22:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:22:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:22:01] [DEBUG] Current Time: 22:22
+[2026-04-14 22:22:01] [DEBUG] Looking for meetings between 22:22 and 22:52
+[2026-04-14 22:22:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:22:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:22:01] [INFO] No reminders to send
+[2026-04-14 22:22:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:22:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:23:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:23:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:23:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:23:01] [DEBUG] Current Time: 22:23
+[2026-04-14 22:23:01] [DEBUG] Looking for meetings between 22:23 and 22:53
+[2026-04-14 22:23:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:23:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:23:01] [INFO] No reminders to send
+[2026-04-14 22:23:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:23:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:24:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:24:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:24:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:24:01] [DEBUG] Current Time: 22:24
+[2026-04-14 22:24:01] [DEBUG] Looking for meetings between 22:24 and 22:54
+[2026-04-14 22:24:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:24:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:24:01] [INFO] No reminders to send
+[2026-04-14 22:24:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:24:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:25:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:25:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:25:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:25:01] [DEBUG] Current Time: 22:25
+[2026-04-14 22:25:01] [DEBUG] Looking for meetings between 22:25 and 22:55
+[2026-04-14 22:25:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:25:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:25:01] [INFO] No reminders to send
+[2026-04-14 22:25:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:25:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:26:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:26:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:26:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:26:01] [DEBUG] Current Time: 22:26
+[2026-04-14 22:26:01] [DEBUG] Looking for meetings between 22:26 and 22:56
+[2026-04-14 22:26:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:26:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:26:01] [INFO] No reminders to send
+[2026-04-14 22:26:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:26:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:27:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:27:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:27:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:27:01] [DEBUG] Current Time: 22:27
+[2026-04-14 22:27:01] [DEBUG] Looking for meetings between 22:27 and 22:57
+[2026-04-14 22:27:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:27:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:27:01] [INFO] No reminders to send
+[2026-04-14 22:27:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:27:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:28:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:28:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:28:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:28:01] [DEBUG] Current Time: 22:28
+[2026-04-14 22:28:01] [DEBUG] Looking for meetings between 22:28 and 22:58
+[2026-04-14 22:28:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:28:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:28:01] [INFO] No reminders to send
+[2026-04-14 22:28:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:28:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:29:01] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:29:01] [INFO] Connecting to MongoDB...
+[2026-04-14 22:29:01] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:29:01] [DEBUG] Current Time: 22:29
+[2026-04-14 22:29:01] [DEBUG] Looking for meetings between 22:29 and 22:59
+[2026-04-14 22:29:01] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:29:01] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:29:01] [INFO] No reminders to send
+[2026-04-14 22:29:01] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:29:01
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:30:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:30:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:30:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:30:00] [DEBUG] Current Time: 22:30
+[2026-04-14 22:30:00] [DEBUG] Looking for meetings between 22:30 and 23:00
+[2026-04-14 22:30:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:30:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:30:00] [INFO] No reminders to send
+[2026-04-14 22:30:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:30:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:31:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:31:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:31:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:31:00] [DEBUG] Current Time: 22:31
+[2026-04-14 22:31:00] [DEBUG] Looking for meetings between 22:31 and 23:01
+[2026-04-14 22:31:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:31:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:31:00] [INFO] No reminders to send
+[2026-04-14 22:31:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:31:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:32:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:32:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:32:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:32:00] [DEBUG] Current Time: 22:32
+[2026-04-14 22:32:00] [DEBUG] Looking for meetings between 22:32 and 23:02
+[2026-04-14 22:32:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:32:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:32:00] [INFO] No reminders to send
+[2026-04-14 22:32:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:32:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:33:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:33:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:33:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:33:00] [DEBUG] Current Time: 22:33
+[2026-04-14 22:33:00] [DEBUG] Looking for meetings between 22:33 and 23:03
+[2026-04-14 22:33:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:33:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:33:00] [INFO] No reminders to send
+[2026-04-14 22:33:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:33:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:34:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:34:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:34:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:34:00] [DEBUG] Current Time: 22:34
+[2026-04-14 22:34:00] [DEBUG] Looking for meetings between 22:34 and 23:04
+[2026-04-14 22:34:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:34:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:34:00] [INFO] No reminders to send
+[2026-04-14 22:34:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:34:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:35:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:35:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:35:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:35:00] [DEBUG] Current Time: 22:35
+[2026-04-14 22:35:00] [DEBUG] Looking for meetings between 22:35 and 23:05
+[2026-04-14 22:35:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:35:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:35:00] [INFO] No reminders to send
+[2026-04-14 22:35:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:35:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:36:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:36:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:36:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:36:00] [DEBUG] Current Time: 22:36
+[2026-04-14 22:36:00] [DEBUG] Looking for meetings between 22:36 and 23:06
+[2026-04-14 22:36:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:36:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:36:00] [INFO] No reminders to send
+[2026-04-14 22:36:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:36:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:37:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:37:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:37:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:37:00] [DEBUG] Current Time: 22:37
+[2026-04-14 22:37:00] [DEBUG] Looking for meetings between 22:37 and 23:07
+[2026-04-14 22:37:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:37:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:37:00] [INFO] No reminders to send
+[2026-04-14 22:37:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:37:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:38:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:38:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:38:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:38:00] [DEBUG] Current Time: 22:38
+[2026-04-14 22:38:00] [DEBUG] Looking for meetings between 22:38 and 23:08
+[2026-04-14 22:38:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:38:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:38:00] [INFO] No reminders to send
+[2026-04-14 22:38:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:38:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:39:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:39:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:39:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:39:00] [DEBUG] Current Time: 22:39
+[2026-04-14 22:39:00] [DEBUG] Looking for meetings between 22:39 and 23:09
+[2026-04-14 22:39:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:39:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:39:00] [INFO] No reminders to send
+[2026-04-14 22:39:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:39:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:40:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:40:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:40:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:40:00] [DEBUG] Current Time: 22:40
+[2026-04-14 22:40:00] [DEBUG] Looking for meetings between 22:40 and 23:10
+[2026-04-14 22:40:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:40:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:40:00] [INFO] No reminders to send
+[2026-04-14 22:40:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:40:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:41:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:41:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:41:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:41:00] [DEBUG] Current Time: 22:41
+[2026-04-14 22:41:00] [DEBUG] Looking for meetings between 22:41 and 23:11
+[2026-04-14 22:41:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:41:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:41:00] [INFO] No reminders to send
+[2026-04-14 22:41:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:41:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:42:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:42:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:42:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:42:00] [DEBUG] Current Time: 22:42
+[2026-04-14 22:42:00] [DEBUG] Looking for meetings between 22:42 and 23:12
+[2026-04-14 22:42:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:42:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:42:00] [INFO] No reminders to send
+[2026-04-14 22:42:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:42:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:43:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:43:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:43:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:43:00] [DEBUG] Current Time: 22:43
+[2026-04-14 22:43:00] [DEBUG] Looking for meetings between 22:43 and 23:13
+[2026-04-14 22:43:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:43:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:43:00] [INFO] No reminders to send
+[2026-04-14 22:43:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:43:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:44:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:44:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:44:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:44:00] [DEBUG] Current Time: 22:44
+[2026-04-14 22:44:00] [DEBUG] Looking for meetings between 22:44 and 23:14
+[2026-04-14 22:44:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:44:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:44:00] [INFO] No reminders to send
+[2026-04-14 22:44:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:44:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:45:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:45:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:45:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:45:00] [DEBUG] Current Time: 22:45
+[2026-04-14 22:45:00] [DEBUG] Looking for meetings between 22:45 and 23:15
+[2026-04-14 22:45:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:45:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:45:00] [INFO] No reminders to send
+[2026-04-14 22:45:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:45:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:46:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:46:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:46:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:46:00] [DEBUG] Current Time: 22:46
+[2026-04-14 22:46:00] [DEBUG] Looking for meetings between 22:46 and 23:16
+[2026-04-14 22:46:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:46:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:46:00] [INFO] No reminders to send
+[2026-04-14 22:46:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:46:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:47:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:47:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:47:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:47:00] [DEBUG] Current Time: 22:47
+[2026-04-14 22:47:00] [DEBUG] Looking for meetings between 22:47 and 23:17
+[2026-04-14 22:47:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:47:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:47:00] [INFO] No reminders to send
+[2026-04-14 22:47:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:47:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:48:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:48:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:48:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:48:00] [DEBUG] Current Time: 22:48
+[2026-04-14 22:48:00] [DEBUG] Looking for meetings between 22:48 and 23:18
+[2026-04-14 22:48:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:48:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:48:00] [INFO] No reminders to send
+[2026-04-14 22:48:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:48:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:49:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:49:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:49:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:49:00] [DEBUG] Current Time: 22:49
+[2026-04-14 22:49:00] [DEBUG] Looking for meetings between 22:49 and 23:19
+[2026-04-14 22:49:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:49:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:49:00] [INFO] No reminders to send
+[2026-04-14 22:49:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:49:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:50:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:50:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:50:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:50:00] [DEBUG] Current Time: 22:50
+[2026-04-14 22:50:00] [DEBUG] Looking for meetings between 22:50 and 23:20
+[2026-04-14 22:50:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:50:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:50:00] [INFO] No reminders to send
+[2026-04-14 22:50:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:50:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:51:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:51:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:51:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:51:00] [DEBUG] Current Time: 22:51
+[2026-04-14 22:51:00] [DEBUG] Looking for meetings between 22:51 and 23:21
+[2026-04-14 22:51:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:51:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:51:00] [INFO] No reminders to send
+[2026-04-14 22:51:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:51:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:52:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:52:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:52:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:52:00] [DEBUG] Current Time: 22:52
+[2026-04-14 22:52:00] [DEBUG] Looking for meetings between 22:52 and 23:22
+[2026-04-14 22:52:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:52:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:52:00] [INFO] No reminders to send
+[2026-04-14 22:52:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:52:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:53:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:53:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:53:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:53:00] [DEBUG] Current Time: 22:53
+[2026-04-14 22:53:00] [DEBUG] Looking for meetings between 22:53 and 23:23
+[2026-04-14 22:53:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:53:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:53:00] [INFO] No reminders to send
+[2026-04-14 22:53:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:53:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:54:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:54:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:54:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:54:00] [DEBUG] Current Time: 22:54
+[2026-04-14 22:54:00] [DEBUG] Looking for meetings between 22:54 and 23:24
+[2026-04-14 22:54:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:54:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:54:00] [INFO] No reminders to send
+[2026-04-14 22:54:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:54:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:55:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:55:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:55:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:55:00] [DEBUG] Current Time: 22:55
+[2026-04-14 22:55:00] [DEBUG] Looking for meetings between 22:55 and 23:25
+[2026-04-14 22:55:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:55:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:55:00] [INFO] No reminders to send
+[2026-04-14 22:55:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:55:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:56:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:56:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:56:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:56:00] [DEBUG] Current Time: 22:56
+[2026-04-14 22:56:00] [DEBUG] Looking for meetings between 22:56 and 23:26
+[2026-04-14 22:56:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:56:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:56:00] [INFO] No reminders to send
+[2026-04-14 22:56:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:56:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:57:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:57:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:57:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:57:00] [DEBUG] Current Time: 22:57
+[2026-04-14 22:57:00] [DEBUG] Looking for meetings between 22:57 and 23:27
+[2026-04-14 22:57:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:57:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:57:00] [INFO] No reminders to send
+[2026-04-14 22:57:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:57:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:58:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:58:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:58:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:58:00] [DEBUG] Current Time: 22:58
+[2026-04-14 22:58:00] [DEBUG] Looking for meetings between 22:58 and 23:28
+[2026-04-14 22:58:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:58:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:58:00] [INFO] No reminders to send
+[2026-04-14 22:58:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:58:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 22:59:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 22:59:00] [INFO] Connecting to MongoDB...
+[2026-04-14 22:59:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 22:59:00] [DEBUG] Current Time: 22:59
+[2026-04-14 22:59:00] [DEBUG] Looking for meetings between 22:59 and 23:29
+[2026-04-14 22:59:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 22:59:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 22:59:00] [INFO] No reminders to send
+[2026-04-14 22:59:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 22:59:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:00:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:00:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:00:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:00:00] [DEBUG] Current Time: 23:00
+[2026-04-14 23:00:00] [DEBUG] Looking for meetings between 23:00 and 23:30
+[2026-04-14 23:00:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:00:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:00:00] [INFO] No reminders to send
+[2026-04-14 23:00:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:00:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:01:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:01:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:01:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:01:00] [DEBUG] Current Time: 23:01
+[2026-04-14 23:01:00] [DEBUG] Looking for meetings between 23:01 and 23:31
+[2026-04-14 23:01:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:01:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:01:00] [INFO] No reminders to send
+[2026-04-14 23:01:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:01:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:02:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:02:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:02:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:02:00] [DEBUG] Current Time: 23:02
+[2026-04-14 23:02:00] [DEBUG] Looking for meetings between 23:02 and 23:32
+[2026-04-14 23:02:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:02:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:02:00] [INFO] No reminders to send
+[2026-04-14 23:02:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:02:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:03:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:03:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:03:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:03:00] [DEBUG] Current Time: 23:03
+[2026-04-14 23:03:00] [DEBUG] Looking for meetings between 23:03 and 23:33
+[2026-04-14 23:03:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:03:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:03:00] [INFO] No reminders to send
+[2026-04-14 23:03:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:03:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:04:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:04:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:04:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:04:00] [DEBUG] Current Time: 23:04
+[2026-04-14 23:04:00] [DEBUG] Looking for meetings between 23:04 and 23:34
+[2026-04-14 23:04:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:04:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:04:00] [INFO] No reminders to send
+[2026-04-14 23:04:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:04:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:05:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:05:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:05:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:05:00] [DEBUG] Current Time: 23:05
+[2026-04-14 23:05:00] [DEBUG] Looking for meetings between 23:05 and 23:35
+[2026-04-14 23:05:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:05:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:05:00] [INFO] No reminders to send
+[2026-04-14 23:05:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:05:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:06:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:06:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:06:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:06:00] [DEBUG] Current Time: 23:06
+[2026-04-14 23:06:00] [DEBUG] Looking for meetings between 23:06 and 23:36
+[2026-04-14 23:06:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:06:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:06:00] [INFO] No reminders to send
+[2026-04-14 23:06:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:06:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:07:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:07:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:07:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:07:00] [DEBUG] Current Time: 23:07
+[2026-04-14 23:07:00] [DEBUG] Looking for meetings between 23:07 and 23:37
+[2026-04-14 23:07:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:07:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:07:00] [INFO] No reminders to send
+[2026-04-14 23:07:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:07:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:08:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:08:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:08:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:08:00] [DEBUG] Current Time: 23:08
+[2026-04-14 23:08:00] [DEBUG] Looking for meetings between 23:08 and 23:38
+[2026-04-14 23:08:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:08:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:08:00] [INFO] No reminders to send
+[2026-04-14 23:08:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:08:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:09:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:09:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:09:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:09:00] [DEBUG] Current Time: 23:09
+[2026-04-14 23:09:00] [DEBUG] Looking for meetings between 23:09 and 23:39
+[2026-04-14 23:09:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:09:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:09:00] [INFO] No reminders to send
+[2026-04-14 23:09:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:09:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:10:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:10:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:10:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:10:00] [DEBUG] Current Time: 23:10
+[2026-04-14 23:10:00] [DEBUG] Looking for meetings between 23:10 and 23:40
+[2026-04-14 23:10:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:10:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:10:00] [INFO] No reminders to send
+[2026-04-14 23:10:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:10:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:11:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:11:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:11:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:11:00] [DEBUG] Current Time: 23:11
+[2026-04-14 23:11:00] [DEBUG] Looking for meetings between 23:11 and 23:41
+[2026-04-14 23:11:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:11:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:11:00] [INFO] No reminders to send
+[2026-04-14 23:11:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:11:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:12:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:12:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:12:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:12:00] [DEBUG] Current Time: 23:12
+[2026-04-14 23:12:00] [DEBUG] Looking for meetings between 23:12 and 23:42
+[2026-04-14 23:12:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:12:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:12:00] [INFO] No reminders to send
+[2026-04-14 23:12:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:12:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:13:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:13:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:13:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:13:00] [DEBUG] Current Time: 23:13
+[2026-04-14 23:13:00] [DEBUG] Looking for meetings between 23:13 and 23:43
+[2026-04-14 23:13:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:13:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:13:00] [INFO] No reminders to send
+[2026-04-14 23:13:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:13:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:14:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:14:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:14:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:14:00] [DEBUG] Current Time: 23:14
+[2026-04-14 23:14:00] [DEBUG] Looking for meetings between 23:14 and 23:44
+[2026-04-14 23:14:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:14:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:14:00] [INFO] No reminders to send
+[2026-04-14 23:14:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:14:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:15:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:15:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:15:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:15:00] [DEBUG] Current Time: 23:15
+[2026-04-14 23:15:00] [DEBUG] Looking for meetings between 23:15 and 23:45
+[2026-04-14 23:15:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:15:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:15:00] [INFO] No reminders to send
+[2026-04-14 23:15:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:15:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:16:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:16:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:16:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:16:00] [DEBUG] Current Time: 23:16
+[2026-04-14 23:16:00] [DEBUG] Looking for meetings between 23:16 and 23:46
+[2026-04-14 23:16:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:16:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:16:00] [INFO] No reminders to send
+[2026-04-14 23:16:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:16:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:17:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:17:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:17:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:17:00] [DEBUG] Current Time: 23:17
+[2026-04-14 23:17:00] [DEBUG] Looking for meetings between 23:17 and 23:47
+[2026-04-14 23:17:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:17:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:17:00] [INFO] No reminders to send
+[2026-04-14 23:17:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:17:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:18:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:18:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:18:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:18:00] [DEBUG] Current Time: 23:18
+[2026-04-14 23:18:00] [DEBUG] Looking for meetings between 23:18 and 23:48
+[2026-04-14 23:18:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:18:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:18:00] [INFO] No reminders to send
+[2026-04-14 23:18:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:18:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:19:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:19:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:19:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:19:00] [DEBUG] Current Time: 23:19
+[2026-04-14 23:19:00] [DEBUG] Looking for meetings between 23:19 and 23:49
+[2026-04-14 23:19:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:19:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:19:00] [INFO] No reminders to send
+[2026-04-14 23:19:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:19:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:20:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:20:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:20:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:20:00] [DEBUG] Current Time: 23:20
+[2026-04-14 23:20:00] [DEBUG] Looking for meetings between 23:20 and 23:50
+[2026-04-14 23:20:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:20:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:20:00] [INFO] No reminders to send
+[2026-04-14 23:20:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:20:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:21:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:21:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:21:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:21:00] [DEBUG] Current Time: 23:21
+[2026-04-14 23:21:00] [DEBUG] Looking for meetings between 23:21 and 23:51
+[2026-04-14 23:21:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:21:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:21:00] [INFO] No reminders to send
+[2026-04-14 23:21:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:21:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:22:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:22:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:22:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:22:00] [DEBUG] Current Time: 23:22
+[2026-04-14 23:22:00] [DEBUG] Looking for meetings between 23:22 and 23:52
+[2026-04-14 23:22:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:22:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:22:00] [INFO] No reminders to send
+[2026-04-14 23:22:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:22:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:23:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:23:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:23:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:23:00] [DEBUG] Current Time: 23:23
+[2026-04-14 23:23:00] [DEBUG] Looking for meetings between 23:23 and 23:53
+[2026-04-14 23:23:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:23:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:23:00] [INFO] No reminders to send
+[2026-04-14 23:23:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:23:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:24:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:24:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:24:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:24:00] [DEBUG] Current Time: 23:24
+[2026-04-14 23:24:00] [DEBUG] Looking for meetings between 23:24 and 23:54
+[2026-04-14 23:24:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:24:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:24:00] [INFO] No reminders to send
+[2026-04-14 23:24:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:24:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:25:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:25:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:25:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:25:00] [DEBUG] Current Time: 23:25
+[2026-04-14 23:25:00] [DEBUG] Looking for meetings between 23:25 and 23:55
+[2026-04-14 23:25:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:25:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:25:00] [INFO] No reminders to send
+[2026-04-14 23:25:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:25:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:26:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:26:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:26:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:26:00] [DEBUG] Current Time: 23:26
+[2026-04-14 23:26:00] [DEBUG] Looking for meetings between 23:26 and 23:56
+[2026-04-14 23:26:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:26:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:26:00] [INFO] No reminders to send
+[2026-04-14 23:26:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:26:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:27:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:27:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:27:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:27:00] [DEBUG] Current Time: 23:27
+[2026-04-14 23:27:00] [DEBUG] Looking for meetings between 23:27 and 23:57
+[2026-04-14 23:27:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:27:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:27:00] [INFO] No reminders to send
+[2026-04-14 23:27:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:27:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:28:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:28:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:28:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:28:00] [DEBUG] Current Time: 23:28
+[2026-04-14 23:28:00] [DEBUG] Looking for meetings between 23:28 and 23:58
+[2026-04-14 23:28:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:28:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:28:00] [INFO] No reminders to send
+[2026-04-14 23:28:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:28:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:29:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:29:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:29:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:29:00] [DEBUG] Current Time: 23:29
+[2026-04-14 23:29:00] [DEBUG] Looking for meetings between 23:29 and 23:59
+[2026-04-14 23:29:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:29:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:29:00] [INFO] No reminders to send
+[2026-04-14 23:29:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:29:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:30:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:30:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:30:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:30:00] [DEBUG] Current Time: 23:30
+[2026-04-14 23:30:00] [DEBUG] Looking for meetings between 23:30 and 00:00
+[2026-04-14 23:30:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:30:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:30:00] [INFO] No reminders to send
+[2026-04-14 23:30:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:30:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:31:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:31:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:31:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:31:00] [DEBUG] Current Time: 23:31
+[2026-04-14 23:31:00] [DEBUG] Looking for meetings between 23:31 and 00:01
+[2026-04-14 23:31:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:31:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:31:00] [INFO] No reminders to send
+[2026-04-14 23:31:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:31:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:32:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:32:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:32:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:32:00] [DEBUG] Current Time: 23:32
+[2026-04-14 23:32:00] [DEBUG] Looking for meetings between 23:32 and 00:02
+[2026-04-14 23:32:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:32:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:32:00] [INFO] No reminders to send
+[2026-04-14 23:32:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:32:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:33:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:33:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:33:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:33:00] [DEBUG] Current Time: 23:33
+[2026-04-14 23:33:00] [DEBUG] Looking for meetings between 23:33 and 00:03
+[2026-04-14 23:33:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:33:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:33:00] [INFO] No reminders to send
+[2026-04-14 23:33:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:33:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:34:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:34:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:34:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:34:00] [DEBUG] Current Time: 23:34
+[2026-04-14 23:34:00] [DEBUG] Looking for meetings between 23:34 and 00:04
+[2026-04-14 23:34:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:34:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:34:00] [INFO] No reminders to send
+[2026-04-14 23:34:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:34:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:35:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:35:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:35:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:35:00] [DEBUG] Current Time: 23:35
+[2026-04-14 23:35:00] [DEBUG] Looking for meetings between 23:35 and 00:05
+[2026-04-14 23:35:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:35:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:35:00] [INFO] No reminders to send
+[2026-04-14 23:35:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:35:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:36:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:36:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:36:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:36:00] [DEBUG] Current Time: 23:36
+[2026-04-14 23:36:00] [DEBUG] Looking for meetings between 23:36 and 00:06
+[2026-04-14 23:36:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:36:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:36:00] [INFO] No reminders to send
+[2026-04-14 23:36:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:36:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:37:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:37:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:37:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:37:00] [DEBUG] Current Time: 23:37
+[2026-04-14 23:37:00] [DEBUG] Looking for meetings between 23:37 and 00:07
+[2026-04-14 23:37:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:37:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:37:00] [INFO] No reminders to send
+[2026-04-14 23:37:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:37:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:38:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:38:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:38:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:38:00] [DEBUG] Current Time: 23:38
+[2026-04-14 23:38:00] [DEBUG] Looking for meetings between 23:38 and 00:08
+[2026-04-14 23:38:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:38:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:38:00] [INFO] No reminders to send
+[2026-04-14 23:38:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:38:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:39:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:39:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:39:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:39:00] [DEBUG] Current Time: 23:39
+[2026-04-14 23:39:00] [DEBUG] Looking for meetings between 23:39 and 00:09
+[2026-04-14 23:39:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:39:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:39:00] [INFO] No reminders to send
+[2026-04-14 23:39:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:39:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:40:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:40:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:40:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:40:00] [DEBUG] Current Time: 23:40
+[2026-04-14 23:40:00] [DEBUG] Looking for meetings between 23:40 and 00:10
+[2026-04-14 23:40:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:40:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:40:00] [INFO] No reminders to send
+[2026-04-14 23:40:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:40:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:41:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:41:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:41:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:41:00] [DEBUG] Current Time: 23:41
+[2026-04-14 23:41:00] [DEBUG] Looking for meetings between 23:41 and 00:11
+[2026-04-14 23:41:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:41:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:41:00] [INFO] No reminders to send
+[2026-04-14 23:41:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:41:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:42:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:42:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:42:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:42:00] [DEBUG] Current Time: 23:42
+[2026-04-14 23:42:00] [DEBUG] Looking for meetings between 23:42 and 00:12
+[2026-04-14 23:42:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:42:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:42:00] [INFO] No reminders to send
+[2026-04-14 23:42:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:42:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:43:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:43:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:43:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:43:00] [DEBUG] Current Time: 23:43
+[2026-04-14 23:43:00] [DEBUG] Looking for meetings between 23:43 and 00:13
+[2026-04-14 23:43:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:43:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:43:00] [INFO] No reminders to send
+[2026-04-14 23:43:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:43:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:44:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:44:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:44:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:44:00] [DEBUG] Current Time: 23:44
+[2026-04-14 23:44:00] [DEBUG] Looking for meetings between 23:44 and 00:14
+[2026-04-14 23:44:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:44:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:44:00] [INFO] No reminders to send
+[2026-04-14 23:44:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:44:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:45:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:45:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:45:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:45:00] [DEBUG] Current Time: 23:45
+[2026-04-14 23:45:00] [DEBUG] Looking for meetings between 23:45 and 00:15
+[2026-04-14 23:45:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:45:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:45:00] [INFO] No reminders to send
+[2026-04-14 23:45:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:45:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:46:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:46:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:46:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:46:00] [DEBUG] Current Time: 23:46
+[2026-04-14 23:46:00] [DEBUG] Looking for meetings between 23:46 and 00:16
+[2026-04-14 23:46:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:46:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:46:00] [INFO] No reminders to send
+[2026-04-14 23:46:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:46:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:47:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:47:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:47:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:47:00] [DEBUG] Current Time: 23:47
+[2026-04-14 23:47:00] [DEBUG] Looking for meetings between 23:47 and 00:17
+[2026-04-14 23:47:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:47:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:47:00] [INFO] No reminders to send
+[2026-04-14 23:47:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:47:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:48:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:48:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:48:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:48:00] [DEBUG] Current Time: 23:48
+[2026-04-14 23:48:00] [DEBUG] Looking for meetings between 23:48 and 00:18
+[2026-04-14 23:48:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:48:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:48:00] [INFO] No reminders to send
+[2026-04-14 23:48:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:48:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:49:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:49:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:49:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:49:00] [DEBUG] Current Time: 23:49
+[2026-04-14 23:49:00] [DEBUG] Looking for meetings between 23:49 and 00:19
+[2026-04-14 23:49:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:49:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:49:00] [INFO] No reminders to send
+[2026-04-14 23:49:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:49:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:50:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:50:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:50:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:50:00] [DEBUG] Current Time: 23:50
+[2026-04-14 23:50:00] [DEBUG] Looking for meetings between 23:50 and 00:20
+[2026-04-14 23:50:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:50:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:50:00] [INFO] No reminders to send
+[2026-04-14 23:50:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:50:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:51:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:51:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:51:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:51:00] [DEBUG] Current Time: 23:51
+[2026-04-14 23:51:00] [DEBUG] Looking for meetings between 23:51 and 00:21
+[2026-04-14 23:51:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:51:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:51:00] [INFO] No reminders to send
+[2026-04-14 23:51:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:51:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================
+[2026-04-14 23:52:00] [INFO] Starting cron job: Send Meeting Reminders
+[2026-04-14 23:52:00] [INFO] Connecting to MongoDB...
+[2026-04-14 23:52:00] [DEBUG] Current Date: 2026-04-14
+[2026-04-14 23:52:00] [DEBUG] Current Time: 23:52
+[2026-04-14 23:52:00] [DEBUG] Looking for meetings between 23:52 and 00:22
+[2026-04-14 23:52:00] [DEBUG] Total scheduled meetings found: 55
+[2026-04-14 23:52:00] [INFO] Meetings found for reminders: 0
+[2026-04-14 23:52:00] [INFO] No reminders to send
+[2026-04-14 23:52:00] [SUMMARY] ==================================================
+Job: Send Reminders
+Completed: 2026-04-14 23:52:00
+Duration: 0s
+reminders_sent: 0
+reminders_failed: 0
+==================================================

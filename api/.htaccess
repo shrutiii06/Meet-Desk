@@ -1,0 +1,5 @@
+# Route API requests to proper endpoints
+# Allow direct .php access - no rewriting needed
+# Files can be accessed as: /api/auth/register.php or /api/auth/register
+RewriteEngine On
+RewriteBase /MD/api/

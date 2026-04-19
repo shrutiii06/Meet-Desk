@@ -1,1 +1,2 @@
-const API_URL = 'https://meet-desk-production.up.railway.app/api';
+// API Configuration - PHP backend (same server as frontend)
+const API_URL = window.location.origin + '/MD/api';

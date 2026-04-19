@@ -1,0 +1,291 @@
+/* ========================================
+   MeetDesk - Responsive Design System
+   ======================================== */
+
+/* Base Responsive Utilities */
+@media (max-width: 768px) {
+  /* Hide desktop sidebar */
+  .sidebar-desktop {
+    display: none !important;
+  }
+  
+  /* Show mobile header */
+  .mobile-header {
+    display: flex !important;
+  }
+  
+  /* Hide right panel on mobile */
+  .right-panel-desktop {
+    display: none !important;
+  }
+  
+  /* Full width containers on mobile */
+  .container-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Smaller text on mobile */
+  .text-responsive {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Smaller buttons on mobile */
+  .btn-responsive {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  /* Stack columns on mobile */
+  .grid-responsive {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Smaller spacing on mobile */
+  .gap-responsive {
+    gap: 1rem !important;
+  }
+  
+  /* Modal full screen on mobile */
+  .modal-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Tablet Responsive (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar-desktop {
+    display: flex !important;
+  }
+  
+  .mobile-header {
+    display: none !important;
+  }
+  
+  /* Narrower right panel on tablet */
+  .right-panel-desktop {
+    width: 20rem !important;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1025px) {
+  .sidebar-desktop {
+    display: flex !important;
+  }
+  
+  .mobile-header {
+    display: none !important;
+  }
+  
+  .right-panel-desktop {
+    display: flex !important;
+  }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 16rem;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Form Responsive */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Table Responsive */
+@media (max-width: 768px) {
+  .table-responsive {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table-responsive table {
+    min-width: 600px;
+  }
+}
+
+/* Card Responsive */
+@media (max-width: 768px) {
+  .card-responsive {
+    border-radius: 0 !important;
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+  }
+}
+
+/* Meeting List Responsive */
+@media (max-width: 768px) {
+  .meeting-card {
+    padding: 1rem !important;
+  }
+  
+  .meeting-time {
+    font-size: 0.75rem !important;
+  }
+  
+  .meeting-id {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Dashboard Grid Responsive */
+@media (max-width: 640px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  
+  .dashboard-button {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  
+  .dashboard-icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+}
+
+/* Profile Page Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 1rem !important;
+  }
+  
+  .profile-avatar {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  
+  .profile-section {
+    padding: 1rem !important;
+  }
+}
+
+/* Schedule Page Responsive */
+@media (max-width: 768px) {
+  .schedule-form {
+    padding: 1rem !important;
+  }
+  
+  .attendee-chip {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+}
+
+/* Join Page Responsive */
+@media (max-width: 768px) {
+  .join-container {
+    padding: 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  .join-input {
+    font-size: 1.25rem !important;
+    padding: 0.75rem !important;
+  }
+}
+
+/* Utility Classes */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Safe area for notched devices */
+@supports (padding: max(0px)) {
+  .safe-area-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  
+  .safe-area-left {
+    padding-left: max(1rem, env(safe-area-inset-left));
+  }
+  
+  .safe-area-right {
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
